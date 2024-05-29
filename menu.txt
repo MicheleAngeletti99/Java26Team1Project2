@@ -3,3 +3,8 @@ Ti dà la carica
 
 Menu di carne
 
+Bevande
+Acqua:          bottiglia da 1l naturale o frizzante,   prezzo: 1€
+Vino bianco:    bottiglia da 0,75l di Passerina,        prezzo: 9,90€
+Vino rosso:     bottiglia da 0,75l di Rosso Piceno,     prezzo: 9,90€
+Coca cola:      lattina da 33cl di coca cola,           prezzo: 0,95€

@@ -9,7 +9,7 @@ Antipasto caldo        patatine fritte, panelle e crocchè di patate       prezz
 Polenta fritta         polenta fritta servita con funghi trifolati        prezzo: 8,00 €
 
 Bevande
-Acqua:          bottiglia da 1l naturale o frizzante,   prezzo: 1€
-Vino bianco:    bottiglia da 0,75l di Passerina,        prezzo: 9,90€
-Vino rosso:     bottiglia da 0,75l di Rosso Piceno,     prezzo: 9,90€
-Coca cola:      lattina da 33cl di coca cola,           prezzo: 0,95€
+Acqua          bottiglia da 1l naturale o frizzante,   prezzo: 1€
+Vino bianco    bottiglia da 0,75l di Passerina,        prezzo: 9,90€
+Vino rosso     bottiglia da 0,75l di Rosso Piceno,     prezzo: 9,90€
+Coca cola      lattina da 33cl di coca cola,           prezzo: 0,95€

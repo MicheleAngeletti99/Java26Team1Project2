@@ -3,6 +3,11 @@ Ti dà la carica
 
 Menu di carne
 
+Antipasti
+Bruschette      pane tostato con pomodoro condito all'aglio e olio        prezzo: 3,50 €
+Antipasto caldo        patatine fritte, panelle e crocchè di patate       prezzo: 5,00 €
+Polenta fritta         polenta fritta servita con funghi trifolati        prezzo: 8,00 €
+
 Bevande
 Acqua:          bottiglia da 1l naturale o frizzante,   prezzo: 1€
 Vino bianco:    bottiglia da 0,75l di Passerina,        prezzo: 9,90€

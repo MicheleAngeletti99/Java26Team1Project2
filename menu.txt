@@ -14,6 +14,12 @@ Carbonara       Uova,guanciale,pecorino a sentimento         prezzo: 20,99 €
 Bolognese       Ragù alla bolognese                          prezzo: 15,51 €
 Genovese        Cipolle,carne                                prezzo: 14,00 €
 
+Secondi
+
+Fiorentina      Fassona, Contorno1                           prezzo: 17,48 €
+Pollo           Pollo, Patate                                prezzo: 13,67 €
+Maiale          Costate, Contorno2                           prezzo; 23,15 €
+
 Bevande
 Acqua          bottiglia da 1l naturale o frizzante,   prezzo: 1€
 Vino bianco    bottiglia da 0,75l di Passerina,        prezzo: 9,90€

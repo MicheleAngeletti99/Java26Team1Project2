@@ -56,9 +56,9 @@ public abstract class Portata {
             System.out.print(".");
         }
 
-        System.out.println(prezzo);
+        System.out.println(prezzo + "€");
         System.out.println(descrizione);
-        System.out.print(ingredienti);
+        System.out.println(ingredienti + '\n');
     }
 
 

@@ -1,3 +1,5 @@
+package src;
+
 public class Main {
     public static void main(String[] args) {
         //Antipasti
@@ -7,6 +9,14 @@ public class Main {
         antipasto2.stampaDettagli();
         Antipasti antipasto3 = new Antipasti("Polenta fritta", 10.55,"polenta fritta servita con funghi","farina di mais e funghi");
         antipasto3.stampaDettagli();
+
+        //Primi
+        Primi primi1 = new Primi ("Carbonara", 30.99, "Guanciale come sempre", "Uova,guanciale,pecorino a sentimento");
+        primi1.stampaDettagli();
+        Primi primi2 = new Primi ("Bolognese", 15.51, "Ragù bono", "Ragù alla bolognese");
+        primi2.stampaDettagli();
+        Primi primi3 = new Primi ("Genovese", 14.00, "pasta con cipolle e carne", "Cipolle, carne");
+        primi3.stampaDettagli();
 
         // desserts
         Desserts tiramisu = new Desserts("Tiramisu", 3.99,"dessert, di origine italiana", "ladyfingers (savoiardi), egg yolks, sugar, coffee, mascarpone and cocoa powder.");

@@ -10,7 +10,7 @@ Polenta fritta         polenta fritta servita con funghi trifolati        prezzo
 
 Primi
 
-Carbonara       Uova,guanciale,pecorino a sentimento         prezzo: 20,99 €
+Carbonara       Uova,guanciale,pecorino a sentimento         prezzo: 30,99 €
 Bolognese       Ragù alla bolognese                          prezzo: 15,51 €
 Genovese        Cipolle,carne                                prezzo: 14,00 €
 

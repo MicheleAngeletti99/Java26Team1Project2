@@ -1,4 +1,4 @@
-package src;
+
 
 public class Main {
     public static void main(String[] args) {
@@ -36,5 +36,12 @@ public class Main {
         Portata cocaCola = new Bevande("Coca cola", 0.95, "lattina da 33cl di coca cola", "acqua, anidride carbonica, zucchero, colorante caramello (E 150D), aromi naturali, caffeina e acido fosforico (E 338)");
         cocaCola.stampaDettagli();
 
+        // Secondi
+        Portata fiorentina = new Secondi("Fiorentina", 17.48,"bella bisteccona","fassona, contorno1");
+        fiorentina.stampaDettagli();
+        Portata pollo = new Secondi("Pollo",13.67,"pieno di proteine", "Pollo, Patate");
+        pollo.stampaDettagli();
+        Portata maiale = new Secondi("Maiale",23.15,"carne grassa","Costate, Contorno2");
+        maiale.stampaDettagli();
     }
 }

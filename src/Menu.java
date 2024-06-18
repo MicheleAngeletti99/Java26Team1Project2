@@ -31,7 +31,7 @@ public class Menu {
     listaPortate.add(portata);
     }
     // rimuoviPortata
-
+    public void rimuoviPortata(Portata portata){ listaPortate.remove(portata);}
     // modificaPrezzo
 
     // stampaMenu

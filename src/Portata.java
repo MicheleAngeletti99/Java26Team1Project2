@@ -49,7 +49,7 @@ public abstract class Portata {
 
     // metodo per stampare il menu
     public void stampaDettagli(){
-        System.out.print(nome + " ");
+        System.out.print('\n' + nome + " ");
         // inseriamo i puntini
         Integer puntini = 40 - nome.length();
         for(int i = 0; i<= puntini; i++ ){
@@ -58,7 +58,7 @@ public abstract class Portata {
 
         System.out.println(prezzo + "€");
         System.out.println(descrizione);
-        System.out.println(ingredienti + '\n');
+        System.out.println(ingredienti);
     }
 
 

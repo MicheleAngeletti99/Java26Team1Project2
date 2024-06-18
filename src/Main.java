@@ -1,4 +1,6 @@
-
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
@@ -19,7 +21,7 @@ public class Main {
 
         // desserts
         Portata tiramisu = new Desserts("Tiramisu", 3.99, "dessert, di origine italiana", "ladyfingers (savoiardi), egg yolks, sugar, coffee, mascarpone and cocoa powder.");
-        Portata cheeseCake = new Desserts("cheeseCake", 4.00, "un dolce a base di formaggio fresco a pasta molle", " eggs, and sugar. It may have a crust or base made from crushed cookies (or digestive biscuits), graham crackers, pastry, or sometimes sponge cake.");
+        Portata cheeseCake = new Desserts("CheeseCake", 4.00, "un dolce a base di formaggio fresco a pasta molle", " eggs, and sugar. It may have a crust or base made from crushed cookies (or digestive biscuits), graham crackers, pastry, or sometimes sponge cake.");
         Portata chocolateFudge = new Desserts("Chocolate Fudge", 5.00, "a dense, rich confection", "sugar, milk or cream, butter and chocolate or other flavorings.");
 
         // Bevande
@@ -29,5 +31,8 @@ public class Main {
         Portata cocaCola = new Bevande("Coca cola", 0.95, "lattina da 33cl di coca cola", "acqua, anidride carbonica, zucchero, colorante caramello (E 150D), aromi naturali, caffeina e acido fosforico (E 338)", 2024, false);
 
         // Menu
+        List<Portata> listaPortate = new ArrayList<>(Arrays.asList(antipasto1, antipasto2, antipasto3, primi1, primi2, primi3,
+                fiorentina, pollo, maiale, tiramisu, cheeseCake, chocolateFudge, acqua, vinoBianco, vinoRosso, cocaCola));
+        Menu menuCarne = new Menu("di carne", listaPortate);
     }
 }

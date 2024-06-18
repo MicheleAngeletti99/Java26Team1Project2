@@ -27,7 +27,9 @@ public class Menu {
     }
 
     // aggiungiPortata
-
+    public void aggiungiPortata(Portata portata){
+    listaPortate.add(portata);
+    }
     // rimuoviPortata
 
     // modificaPrezzo

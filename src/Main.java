@@ -5,9 +5,9 @@ import java.util.List;
 public class Main {
     public static void main(String[] args) {
         //Antipasti
-        Portata antipasto1 = new Antipasti("Bruschette", 5.99, "pane tostato e pomodoro", "pane, pomodoro, olio, aglio");
-        Portata antipasto2 = new Antipasti("Misto caldo", 8.99, "patatine fritte, arancine fritte e panelle fritte", "patate, farina di ceci, palle di riso fritte");
-        Portata antipasto3 = new Antipasti("Polenta fritta", 10.55, "polenta fritta servita con funghi", "farina di mais e funghi");
+        Portata antipasto1 = new Antipasti("Bruschette", 5.99, "pane tostato e pomodoro", "pane, pomodoro, olio, aglio","Pomodori e aglio originari dalla Sicilia, pane di nostra produzione");
+        Portata antipasto2 = new Antipasti("Misto caldo", 8.99, "patatine fritte, arancine fritte e panelle fritte", "patate, farina di ceci, palle di riso fritte","Prodotti originari dal tipo streetFood Siciliano");
+        Portata antipasto3 = new Antipasti("Polenta fritta", 10.55, "polenta fritta servita con funghi", "farina di mais e funghi", "Prodotti e tipo di piatto originario dalla Toscana");
 
         //Primi
         Portata primi1 = new Primi("Carbonara", 30.99, "Guanciale come sempre", "Uova,guanciale,pecorino a sentimento");
@@ -34,5 +34,8 @@ public class Main {
         List<Portata> listaPortate = new ArrayList<>(Arrays.asList(antipasto1, antipasto2, antipasto3, primi1, primi2, primi3,
                 fiorentina, pollo, maiale, tiramisu, cheeseCake, chocolateFudge, acqua, vinoBianco, vinoRosso, cocaCola));
         Menu menuCarne = new Menu("di carne", listaPortate);
+        menuCarne.aggiungiPortata(new Antipasti("Patatine Fritte", 3.50, "patate lavate e fritte", "patate", "Patate originarie del Piemonte"));
+        menuCarne.aggiungiPortata(new Primi("Aglio e olio", 18.89, "Pasta aglio, olio e peperoncino", "Pasta di grano duro, aglio, olio, peperoncino"));
+
     }
 }

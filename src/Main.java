@@ -40,7 +40,6 @@ public class Main {
         menuCarne.aggiungiPortata(new Secondi("Gulasch", 25.99,"Stufato di carne","Carne e spezie varie",Cottura.BENCOTTA));
         menuCarne.aggiungiPortata(new Desserts("Torta al cioccolato", 5.70, "Torta al cioccolato al forno", "Uova burro cioccolato e farina", false));
         menuCarne.aggiungiPortata(new Bevande("Aranciata", 3.50, "Spremuta di arancia frizzante", "Arancia zucchero e anidridecarbonica", 2024, false) );
-menuCarne.stampaMenu();
-
+        menuCarne.stampaMenu();
     }
 }

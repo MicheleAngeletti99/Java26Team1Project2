@@ -4,8 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="967428fe-9716-472c-a46e-a43fb2834770" name="Changes" comment="fix misc.xml">
+    <list default="true" id="967428fe-9716-472c-a46e-a43fb2834770" name="Changes" comment="aggiunto metodo per rimuovere una portata dal menu">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Secondi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Secondi.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,7 +23,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="main" />
+        <entry key="$PROJECT_DIR$" value="develop" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -40,7 +41,7 @@
   "keyToString": {
     "Application.Main.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "develop",
+    "git-widget-placeholder": "enum-cotura",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
     "project.structure.last.edited": "Modules",
@@ -89,6 +90,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="creata classe secondi" />
-    <option name="LAST_COMMIT_MESSAGE" value="creata classe secondi" />
+    <MESSAGE value="aggiunto metodo per rimuovere una portata dal menu" />
+    <option name="LAST_COMMIT_MESSAGE" value="aggiunto metodo per rimuovere una portata dal menu" />
   </component>
 </project>

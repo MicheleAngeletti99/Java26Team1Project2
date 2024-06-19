@@ -37,6 +37,7 @@ public class Main {
         Menu menuCarne = new Menu("di carne", listaPortate);
         menuCarne.aggiungiPortata(new Antipasti("Patatine Fritte", 3.50, "patate lavate e fritte", "patate", "Patate originarie del Piemonte"));
         menuCarne.aggiungiPortata(new Primi("Aglio e olio", 18.89, "Pasta aglio, olio e peperoncino", "Pasta di grano duro, aglio, olio, peperoncino","Pentola", "Lazio"));
+menuCarne.stampaMenu();
 
     }
 }

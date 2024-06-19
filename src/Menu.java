@@ -33,6 +33,14 @@ public class Menu {
     // rimuoviPortata
     public void rimuoviPortata(Portata portata){ listaPortate.remove(portata);}
     // modificaPrezzo
+    public void modificaPrezzo(String nome, Double prezzo){
+       // portata.setPrezzo(prezzo);
+        for(Portata portata: listaPortate){
+            if (portata.getNome().equals(nome)){
+                portata.setPrezzo(prezzo);
+            }
+        }
+    }
 
     // stampaMenu
 }

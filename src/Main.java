@@ -33,9 +33,13 @@ public class Main {
         // Menu
         List<Portata> listaPortate = new ArrayList<>(Arrays.asList(antipasto1, antipasto2, antipasto3, primi1, primi2, primi3,
                 fiorentina, pollo, maiale, tiramisu, cheeseCake, chocolateFudge, acqua, vinoBianco, vinoRosso, cocaCola));
+
         Menu menuCarne = new Menu("di carne", listaPortate);
+
         menuCarne.aggiungiPortata(new Antipasti("Patatine Fritte", 3.50, "patate lavate e fritte", "patate", "Patate originarie del Piemonte"));
         menuCarne.aggiungiPortata(new Primi("Aglio e olio", 18.89, "Pasta aglio, olio e peperoncino", "Pasta di grano duro, aglio, olio, peperoncino"));
-
+        menuCarne.aggiungiPortata(new Secondi("Gulasch", 25.99,"Stufato di carne","Carne e spezie varie",Cottura.BENCOTTA));
+        menuCarne.aggiungiPortata(new Desserts("Torta al cioccolato", 5.70, "Torta al cioccolato al forno", "Uova burro cioccolato e farina", false));
+        menuCarne.aggiungiPortata(new Bevande("Aranciata", 3.50, "Spremuta di aragancia frizzante", "Arancia zucchero e anidridecarbonica", 2024, false) );
     }
 }

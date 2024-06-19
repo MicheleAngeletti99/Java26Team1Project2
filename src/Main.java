@@ -15,9 +15,9 @@ public class Main {
         Portata primi3 = new Primi("Genovese", 14.00, "pasta con cipolle e carne", "Cipolle, carne");
 
         // Secondi
-        Portata fiorentina = new Secondi("Fiorentina", 17.48, "bella bisteccona", "fassona, contorno1");
-        Portata pollo = new Secondi("Pollo", 13.67, "pieno di proteine", "Pollo, Patate");
-        Portata maiale = new Secondi("Maiale", 23.15, "carne grassa", "Costate, Contorno2");
+        Portata fiorentina = new Secondi("Fiorentina", 17.48, "bella bisteccona", "fassona, contorno1",Cottura.ALSANGUE);
+        Portata pollo = new Secondi("Pollo", 13.67, "pieno di proteine", "Pollo, Patate", Cottura.MEDIA);
+        Portata maiale = new Secondi("Maiale", 23.15, "carne grassa", "Costate, Contorno2", Cottura.BENCOTTA);
 
         // desserts
         Portata tiramisu = new Desserts("Tiramisu", 3.99, "dessert, di origine italiana", "ladyfingers (savoiardi), egg yolks, sugar, coffee, mascarpone and cocoa powder.");

@@ -42,4 +42,40 @@ public class Menu {
         }
     }
     // stampaMenu
+
+    public void stampaMenu() {
+        System.out.println("Menu: " + tipo);
+        System.out.println("\nANTIPASTI: ");
+        for (Portata portata : listaPortate) {
+            if (portata instanceof Antipasti) {
+                portata.stampaDettagli();
+            }
+        }
+        System.out.println("\nPRIMI: ");
+        for (Portata portata : listaPortate) {
+            if (portata instanceof Primi) {
+                portata.stampaDettagli();
+            }
+        }
+        System.out.println("\nSECONDI: ");
+        for (Portata portata : listaPortate) {
+            if (portata instanceof Secondi) {
+                portata.stampaDettagli();
+            }
+        }
+        System.out.println("\nDESSERTS: ");
+        for (Portata portata : listaPortate) {
+            if (portata instanceof Desserts) {
+                portata.stampaDettagli();
+            }
+        }
+        System.out.println("\nBEVANDE: ");
+        for (Portata portata : listaPortate) {
+            if (portata instanceof Bevande) {
+                portata.stampaDettagli();
+            }
+        }
+
+    }
+
 }

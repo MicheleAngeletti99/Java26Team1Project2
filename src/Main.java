@@ -10,9 +10,10 @@ public class Main {
         Portata antipasto3 = new Antipasti("Polenta fritta", 10.55, "polenta fritta servita con funghi", "farina di mais e funghi", "Prodotti e tipo di piatto originario dalla Toscana");
 
         //Primi
-        Portata primi1 = new Primi("Carbonara", 30.99, "Guanciale come sempre", "Uova,guanciale,pecorino a sentimento");
-        Portata primi2 = new Primi("Bolognese", 15.51, "Ragù bono", "Ragù alla bolognese");
-        Portata primi3 = new Primi("Genovese", 14.00, "pasta con cipolle e carne", "Cipolle, carne");
+        Portata primi1 = new Primi("Carbonara", 30.99, "Guanciale come sempre", "Uova,guanciale,pecorino a sentimento", "Pentola", "Firenze");
+        Portata primi2 = new Primi("Bolognese", 15.51, "Ragù bono", "Ragù alla bolognese", "Pentola", "Calabria");
+        Portata primi3 = new Primi("Genovese", 14.00, "pasta con cipolle e carne", "Cipolle, carne","Pentola", "Sicilia");
+
 
         // Secondi
         Portata fiorentina = new Secondi("Fiorentina", 17.48, "bella bisteccona", "fassona, contorno1",Cottura.ALSANGUE);
@@ -35,7 +36,7 @@ public class Main {
                 fiorentina, pollo, maiale, tiramisu, cheeseCake, chocolateFudge, acqua, vinoBianco, vinoRosso, cocaCola));
         Menu menuCarne = new Menu("di carne", listaPortate);
         menuCarne.aggiungiPortata(new Antipasti("Patatine Fritte", 3.50, "patate lavate e fritte", "patate", "Patate originarie del Piemonte"));
-        menuCarne.aggiungiPortata(new Primi("Aglio e olio", 18.89, "Pasta aglio, olio e peperoncino", "Pasta di grano duro, aglio, olio, peperoncino"));
+        menuCarne.aggiungiPortata(new Primi("Aglio e olio", 18.89, "Pasta aglio, olio e peperoncino", "Pasta di grano duro, aglio, olio, peperoncino","Pentola", "Lazio"));
 
     }
 }

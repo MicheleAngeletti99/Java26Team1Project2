@@ -1,3 +1,5 @@
+import java.util.Objects;
+
 public abstract class Portata {
     // gli field
     private String nome;
@@ -61,5 +63,16 @@ public abstract class Portata {
         System.out.println(ingredienti);
     }
 
+    // Faccio Override di equals e hashCode così due portate saranno uguali se hanno gli stessi valori nei campi
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Portata portata)) return false;
+        return Objects.equals(nome, portata.nome) && Objects.equals(prezzo, portata.prezzo) && Objects.equals(descrizione, portata.descrizione) && Objects.equals(ingredienti, portata.ingredienti);
+    }
 
+    @Override
+    public int hashCode() {
+        return Objects.hash(nome, prezzo, descrizione, ingredienti);
+    }
 }

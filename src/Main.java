@@ -41,5 +41,9 @@ public class Main {
         menuCarne.aggiungiPortata(new Desserts("Torta al cioccolato", 5.70, "Torta al cioccolato al forno", "Uova burro cioccolato e farina", false));
         menuCarne.aggiungiPortata(new Bevande("Aranciata", 3.50, "Spremuta di arancia frizzante", "Arancia zucchero e anidridecarbonica", 2024, false) );
         menuCarne.stampaMenu();
+
+        // Ristorante
+        Ristorante ristorantePatona = new Ristorante("Patona", "Palermo");
+        ristorantePatona.aggiungiMenu(menuCarne);
     }
 }

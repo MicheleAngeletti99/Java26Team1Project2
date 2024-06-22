@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 import java.util.List;
 
 public class Menu {
@@ -5,9 +6,9 @@ public class Menu {
     private String tipo;
     private List<Portata> listaPortate;
 
-    public Menu(String tipo, List<Portata> listaPortate) {
+    public Menu(String tipo) {
         this.tipo = tipo;
-        this.listaPortate = listaPortate;
+        this.listaPortate = new ArrayList<>();
     }
 
     public String getTipo() {
@@ -21,11 +22,6 @@ public class Menu {
     public List<Portata> getListaPortate() {
         return listaPortate;
     }
-
-    public void setListaPortate(List<Portata> listaPortate) {
-        this.listaPortate = listaPortate;
-    }
-
     // aggiungiPortata
     public void aggiungiPortata(Portata portata){
     listaPortate.add(portata);
@@ -33,11 +29,11 @@ public class Menu {
     // rimuoviPortata
     public void rimuoviPortata(Portata portata){ listaPortate.remove(portata);}
     // modificaPrezzo
-    public void modificaPrezzo(String nome, Double prezzo){
+    public void modificaPrezzo(Portata portata, Double nuovoPrezzo){
        // portata.setPrezzo(prezzo);
-        for(Portata portata: listaPortate){
-            if (portata.getNome().equals(nome)){
-                portata.setPrezzo(prezzo);
+        for(Portata elemento : listaPortate){
+            if (portata.equals(elemento)){
+                portata.setPrezzo(nuovoPrezzo);
             }
         }
     }

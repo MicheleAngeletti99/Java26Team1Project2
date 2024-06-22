@@ -32,14 +32,41 @@ public class Main {
         Portata cocaCola = new Bevande("Coca cola", 0.95, "lattina da 33cl di coca cola", "acqua, anidride carbonica, zucchero, colorante caramello (E 150D), aromi naturali, caffeina e acido fosforico (E 338)", 2024, false);
 
         // Menu
-        List<Portata> listaPortate = new ArrayList<>(Arrays.asList(antipasto1, antipasto2, antipasto3, primi1, primi2, primi3,
-                fiorentina, pollo, maiale, tiramisu, cheeseCake, chocolateFudge, acqua, vinoBianco, vinoRosso, cocaCola));
-        Menu menuCarne = new Menu("di carne", listaPortate);
+        Menu menuCarne = new Menu("di carne");
+        //Antipasti
+        menuCarne.aggiungiPortata(antipasto1);
+        menuCarne.aggiungiPortata(antipasto2);
+        menuCarne.aggiungiPortata(antipasto3);
         menuCarne.aggiungiPortata(new Antipasti("Patatine Fritte", 3.50, "patate lavate e fritte", "patate", "Patate originarie del Piemonte"));
+        menuCarne.modificaPrezzo(antipasto1, 4.50);
+        //Primi
+        menuCarne.aggiungiPortata(primi1);
+        menuCarne.aggiungiPortata(primi2);
+        menuCarne.aggiungiPortata(primi3);
         menuCarne.aggiungiPortata(new Primi("Aglio e olio", 18.89, "Pasta aglio, olio e peperoncino", "Pasta di grano duro, aglio, olio, peperoncino","Pentola", "Lazio"));
+        menuCarne.modificaPrezzo(primi1, 8.30);
+        //Secondi
+        menuCarne.aggiungiPortata(fiorentina);
+        menuCarne.aggiungiPortata(pollo);
+        menuCarne.aggiungiPortata(maiale);
         menuCarne.aggiungiPortata(new Secondi("Gulasch", 25.99,"Stufato di carne","Carne e spezie varie",Cottura.BENCOTTA));
+        menuCarne.modificaPrezzo(pollo, 7.50);
+
+        //Dessert
+        menuCarne.aggiungiPortata(tiramisu);
+        menuCarne.aggiungiPortata(cheeseCake);
+        menuCarne.aggiungiPortata(chocolateFudge);
         menuCarne.aggiungiPortata(new Desserts("Torta al cioccolato", 5.70, "Torta al cioccolato al forno", "Uova burro cioccolato e farina", false));
+        menuCarne.modificaPrezzo(tiramisu, 6.55);
+        //Bevande
+        menuCarne.aggiungiPortata(acqua);
+        menuCarne.aggiungiPortata(vinoBianco);
+        menuCarne.aggiungiPortata(vinoRosso);
+        menuCarne.aggiungiPortata(cocaCola);
         menuCarne.aggiungiPortata(new Bevande("Aranciata", 3.50, "Spremuta di arancia frizzante", "Arancia zucchero e anidridecarbonica", 2024, false) );
+        menuCarne.modificaPrezzo(vinoRosso, 10.50);
+
+        //stampo il menu di carne
         menuCarne.stampaMenu();
 
         // Ristorante

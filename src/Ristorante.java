@@ -37,7 +37,7 @@ public class Ristorante {
 
     public void stampaMenuCompleto() {
         // Inizializzo un menu che conterrà tutte le portate disponibili
-        Menu menuCompleto = new Menu("completo", new ArrayList<Portata>());
+        Menu menuCompleto = new Menu("completo");
         // Faccio un ciclo per leggere tutti i menu
         for (Menu menu : listaMenu) {
             // Faccio un ciclo per leggere tutte le portate del menu corrente

@@ -32,7 +32,7 @@ public class Main {
         Portata cocaCola = new Bevande("Coca cola", 0.95, "lattina da 33cl di coca cola", "acqua, anidride carbonica, zucchero, colorante caramello (E 150D), aromi naturali, caffeina e acido fosforico (E 338)", 2024, false);
 
         // Menu
-        Menu menuCarne = new Menu("di carne");
+        Menu menuCarne = new Menu(TipoMenu.CARNE);
         //Antipasti
         menuCarne.aggiungiPortata(antipasto1);
         menuCarne.aggiungiPortata(antipasto2);

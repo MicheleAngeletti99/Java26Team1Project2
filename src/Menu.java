@@ -3,19 +3,19 @@ import java.util.List;
 
 public class Menu {
 
-    private String tipo;
+    private TipoMenu tipo;
     private List<Portata> listaPortate;
 
-    public Menu(String tipo) {
+    public Menu(TipoMenu tipo) {
         this.tipo = tipo;
         this.listaPortate = new ArrayList<>();
     }
 
-    public String getTipo() {
+    public TipoMenu getTipo() {
         return tipo;
     }
 
-    public void setTipo(String tipo) {
+    public void setTipo(TipoMenu tipo) {
         this.tipo = tipo;
     }
 
@@ -40,7 +40,7 @@ public class Menu {
     // stampaMenu
 
     public void stampaMenu() {
-        System.out.println("Menu: " + tipo);
+        System.out.println(tipo.getDescrizione());
         System.out.println("\nANTIPASTI: ");
         for (Portata portata : listaPortate) {
             if (portata instanceof Antipasti) {

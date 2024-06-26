@@ -1,6 +1,6 @@
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
+import enumarazioni.Colori;
+import enumarazioni.Cottura;
+import enumarazioni.TipoMenu;
 
 public class Main {
     public static void main(String[] args) {
@@ -16,7 +16,7 @@ public class Main {
 
 
         // Secondi
-        Portata fiorentina = new Secondi("Fiorentina", 17.48, "bella bisteccona", "fassona, contorno1",Cottura.ALSANGUE);
+        Portata fiorentina = new Secondi("Fiorentina", 17.48, "bella bisteccona", "fassona, contorno1", Cottura.ALSANGUE);
         Portata pollo = new Secondi("Pollo", 13.67, "pieno di proteine", "Pollo, Patate", Cottura.MEDIA);
         Portata maiale = new Secondi("Maiale", 23.15, "carne grassa", "Costate, Contorno2", Cottura.BENCOTTA);
 

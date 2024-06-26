@@ -1,6 +1,9 @@
+import enumarazioni.Colori;
+
 public class Primi extends Portata {
     private String cottura;
     private String  regioneProvenienza;
+
     public Primi(String nome, Double prezzo, String descrizione, String ingredienti, String cottura, String regioneProvenienza) {
         super(nome, prezzo, descrizione, ingredienti);
         this.cottura = cottura;
@@ -22,6 +25,12 @@ public class Primi extends Portata {
     public void setRegioneProvenienza(String regioneProvenienza) {
         this.regioneProvenienza = regioneProvenienza;
     }
+
+    @Override
+    public String stampaColore() {
+        return Colori.GIALLO.getColore();
+    }
+
     @Override
     public void stampaDettagli() {
         super.stampaDettagli();

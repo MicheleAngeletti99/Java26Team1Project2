@@ -1,3 +1,5 @@
+package enumarazioni;
+
 public enum TipoMenu {
     CARNE("Menu di carne"),
     PESCE("Menu di pesce"),

@@ -1,3 +1,5 @@
+import enumarazioni.Colori;
+
 public class Bevande extends Portata {
 
     private Integer annoDiProduzione;
@@ -23,6 +25,11 @@ public class Bevande extends Portata {
 
     public void setCertificazioneDOP(Boolean certificazioneDOP) {
         this.certificazioneDOP = certificazioneDOP;
+    }
+
+    @Override
+    public String stampaColore() {
+        return Colori.BLU.getColore();
     }
 
     @Override

@@ -1,3 +1,5 @@
+import enumarazioni.Colori;
+
 import java.util.Objects;
 
 public abstract class Portata {
@@ -62,6 +64,8 @@ public abstract class Portata {
         System.out.println(descrizione);
         System.out.println(ingredienti);
     }
+
+    public abstract String stampaColore();
 
     // Faccio Override di equals e hashCode così due portate saranno uguali se hanno gli stessi valori nei campi
     @Override

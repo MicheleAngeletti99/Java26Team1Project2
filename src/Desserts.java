@@ -1,3 +1,5 @@
+import enumarazioni.Colori;
+
 public class Desserts extends Portata {
      // i field
     private Boolean glutenFree;
@@ -17,6 +19,11 @@ public class Desserts extends Portata {
 
     public void setGlutenFree(Boolean glutenFree) {
         this.glutenFree = glutenFree;
+    }
+
+    @Override
+    public String stampaColore() {
+        return Colori.VIOLA.getColore();
     }
 
     // override il metodo stampadettagli dal superclass

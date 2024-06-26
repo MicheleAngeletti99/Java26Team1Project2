@@ -1,3 +1,6 @@
+import enumarazioni.Colori;
+import enumarazioni.TipoMenu;
+
 import java.util.ArrayList;
 
 public class Ristorante {

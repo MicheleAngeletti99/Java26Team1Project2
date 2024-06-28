@@ -70,7 +70,7 @@ public class Main {
         menuCarne.stampaMenu();
 
         // Ristorante
-        Ristorante ristorantePatona = new Ristorante("Patona", "Palermo");
+        Ristorante ristorantePatona = new Ristorante("Patona", "Palermo", 30);
         ristorantePatona.aggiungiMenu(menuCarne);
 
     }

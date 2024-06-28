@@ -10,17 +10,28 @@ public class Ristorante {
     private String citta;
     private ArrayList<Menu> listaMenu;
     private Integer idCliente = 1;
-    private HashMap<Integer,Cliente> prenotazione;
+    private HashMap<Integer, Cliente> prenotazione;
+    private Integer copertiDisponibili;
 
     // il costruttore
-    public Ristorante(String nome, String citta) {
+    public Ristorante(String nome, String citta, Integer copertiDisponibili) {
         this.nome = nome;
         this.citta = citta;
         this.listaMenu = new ArrayList<>();
         this.prenotazione = new HashMap<>();
+        this.copertiDisponibili = copertiDisponibili;
     }
 
     // i getter e setter
+
+    public Integer getCopertiDisponibili() {
+        return copertiDisponibili;
+    }
+
+    public void setCopertiDisponibili(Integer copertiDisponibili) {
+        this.copertiDisponibili = copertiDisponibili;
+    }
+
     public String getNome() {
         return nome;
     }
@@ -38,12 +49,12 @@ public class Ristorante {
     }
 
     // il metodo per aggiungere menu
-    public void aggiungiMenu (Menu menu){
+    public void aggiungiMenu(Menu menu) {
         listaMenu.add(menu);
     }
 
     // il metodo per rimuovere menu
-    public void rimuoviMenu(Menu menu){
+    public void rimuoviMenu(Menu menu) {
         listaMenu.remove(menu);
     }
 
@@ -66,22 +77,37 @@ public class Ristorante {
 
     }
 
+    // metodo per gestire Overbooking
+    private boolean gestioneOverbooking(Cliente cliente) {
+        if (copertiDisponibili >= cliente.getNumeroDiCoperti()) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
     // il metodo per aggiungere prenotazione
-    public void aggiungiPrenotazioni(Cliente cliente){
-        prenotazione.put(idCliente,cliente);
-        idCliente++;
+    // gestione overbooking
+    public void aggiungiPrenotazioni(Cliente cliente) {
+        if (gestioneOverbooking(cliente)) {
+            prenotazione.put(idCliente, cliente);
+            idCliente++;
+            copertiDisponibili = copertiDisponibili - cliente.getNumeroDiCoperti();
+        } else {
+            System.out.println("Coperti non disponibili");
+        }
     }
 
     // il metodo per rimuovere prenotazione
-    public void rimuoviPrenotazione(Integer id){
+    public void rimuoviPrenotazione(Integer id) {
+        copertiDisponibili = copertiDisponibili + prenotazione.get(id).getNumeroDiCoperti();
         prenotazione.remove(id);
     }
 
     // il metodo per stampare la lista di prenotazione
-    public void stampaListaDiPrenotazioni(){
-        for (Integer identites: prenotazione.keySet()){
+    public void stampaListaDiPrenotazioni() {
+        for (Integer identites : prenotazione.keySet()) {
             System.out.println("ID prenotazionel: " + identites + " Info prenotazione: " + prenotazione.get(identites));
         }
     }
-
 }

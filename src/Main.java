@@ -90,8 +90,8 @@ public class Main {
         prenotazioniRistoranteLumiere.aggiungiPrenotazioni(riccardo);
         prenotazioniRistoranteLumiere.aggiungiPrenotazioni(andrea);
         prenotazioniRistoranteLumiere.aggiungiPrenotazioni(santo);
+
         // stampo la lista di prenotazioni
-        System.out.println("\n" + "  Prenotazioni " + "\n");
         prenotazioniRistoranteLumiere.stampaListaDiPrenotazioni();
 
         //rimuovo un cliente

@@ -106,8 +106,10 @@ public class Ristorante {
 
     // il metodo per stampare la lista di prenotazione
     public void stampaListaDiPrenotazioni() {
+        System.out.println("      LISTA DI PRENOTAZIONI " + "\n");
         for (Integer identites : prenotazione.keySet()) {
-            System.out.println("ID prenotazionel: " + identites + " Info prenotazione: " + prenotazione.get(identites));
+            System.out.println("ID prenotazione: " + identites);
+            prenotazione.get(identites).stampaDettagli();
         }
     }
 }

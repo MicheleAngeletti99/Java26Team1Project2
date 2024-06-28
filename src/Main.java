@@ -72,5 +72,6 @@ public class Main {
         // Ristorante
         Ristorante ristorantePatona = new Ristorante("Patona", "Palermo");
         ristorantePatona.aggiungiMenu(menuCarne);
+
     }
 }

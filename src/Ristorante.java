@@ -77,7 +77,9 @@ public class Ristorante {
 
     }
 
-    // metodo per gestire Overbooking
+    // metodo per gestire Overbooking, faccio comparazione fra coperti disponibili e coperti richiesti dal cliente
+    // true quando i coperti richiesti dal cliente rientrano nella disponibilità dei coperti del ristornate
+    // false quando i coperti richiesti dal cliente non rientrano nella disponibilità
     private boolean gestioneOverbooking(Cliente cliente) {
         if (copertiDisponibili >= cliente.getNumeroDiCoperti()) {
             return true;
@@ -86,8 +88,8 @@ public class Ristorante {
         }
     }
 
-    // il metodo per aggiungere prenotazione
-    // gestione overbooking
+    // metodo per aggiungere prenotazione
+    // se la gestioneOverbooking sarà true, verranno aggiunti i coperti prenotati e i coperti diponibili del ristornate verranno diminuiti
     public void aggiungiPrenotazioni(Cliente cliente) {
         if (gestioneOverbooking(cliente)) {
             prenotazione.put(idCliente, cliente);
@@ -99,6 +101,7 @@ public class Ristorante {
     }
 
     // il metodo per rimuovere prenotazione
+    // gestione overbooking, ad ogni coperto rimosso i coperti diponibili del ristorante verranno aumentati
     public void rimuoviPrenotazione(Integer id) {
         copertiDisponibili = copertiDisponibili + prenotazione.get(id).getNumeroDiCoperti();
         prenotazione.remove(id);

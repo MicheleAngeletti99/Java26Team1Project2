@@ -84,7 +84,7 @@ public class Main {
         Cliente santo = new Cliente("Santo", "Rocca", 10);
 
         // creo la mappa per prenotazioni
-        Ristorante prenotazioniRistoranteLumiere = new Ristorante("Lumière" ,"Napoli");
+        Ristorante prenotazioniRistoranteLumiere = new Ristorante("Lumière" ,"Napoli",50);
         prenotazioniRistoranteLumiere.aggiungiPrenotazioni(iresha);
         prenotazioniRistoranteLumiere.aggiungiPrenotazioni(michele);
         prenotazioniRistoranteLumiere.aggiungiPrenotazioni(riccardo);

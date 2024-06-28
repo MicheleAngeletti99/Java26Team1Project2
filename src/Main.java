@@ -2,6 +2,9 @@ import enumarazioni.Colori;
 import enumarazioni.Cottura;
 import enumarazioni.TipoMenu;
 
+import java.util.HashMap;
+import java.util.Map;
+
 public class Main {
     public static void main(String[] args) {
         //Antipasti
@@ -72,6 +75,29 @@ public class Main {
         // Ristorante
         Ristorante ristorantePatona = new Ristorante("Patona", "Palermo");
         ristorantePatona.aggiungiMenu(menuCarne);
+
+        // aggiungo clienti
+        Cliente iresha = new Cliente("Iresha", "Warnakulasuriya", 3);
+        Cliente michele = new Cliente("Michele", "Angeletti", 10);
+        Cliente riccardo = new Cliente("Riccardo", "cavaleri", 2);
+        Cliente andrea = new Cliente("Andrea", "Vecchione", 7);
+        Cliente santo = new Cliente("Santo", "Rocca", 10);
+
+        // creo la mappa per prenotazioni
+        Ristorante prenotazioniRistoranteLumiere = new Ristorante("Lumière" ,"Napoli");
+        prenotazioniRistoranteLumiere.aggiungiPrenotazioni(iresha);
+        prenotazioniRistoranteLumiere.aggiungiPrenotazioni(michele);
+        prenotazioniRistoranteLumiere.aggiungiPrenotazioni(riccardo);
+        prenotazioniRistoranteLumiere.aggiungiPrenotazioni(andrea);
+        prenotazioniRistoranteLumiere.aggiungiPrenotazioni(santo);
+        // stampo la lista di prenotazioni
+        System.out.println("\n" + "  Prenotazioni " + "\n");
+        prenotazioniRistoranteLumiere.stampaListaDiPrenotazioni();
+
+        //rimuovo un cliente
+        prenotazioniRistoranteLumiere.rimuoviPrenotazione(4);
+
+
 
     }
 }

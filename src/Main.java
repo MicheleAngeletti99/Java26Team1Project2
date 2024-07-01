@@ -72,9 +72,41 @@ public class Main {
         //stampo il menu di carne
         menuCarne.stampaMenu();
 
-        // Ristorante
+        // Ristorante Patona
         Ristorante ristorantePatona = new Ristorante("Patona", "Palermo", 30);
+
+        //Stampa menu carne del ristorante Patona
         ristorantePatona.aggiungiMenu(menuCarne);
+        ristorantePatona.stampaMenuCompleto();
+
+        // aggiungo clienti
+        Cliente Alberto = new Cliente("Alberto", "Pippa", 11);
+        Cliente Ludmilla = new Cliente("Ludmilla", "Santo", 5);
+        Cliente Francesco = new Cliente("Francesco", "cavaleri", 6);
+        Cliente Paolo = new Cliente("Paolo", "Vecchione", 7);
+        Cliente Roselia = new Cliente("Roselia", "Rocca", 10);
+
+        // creo la mappa per prenotazioni
+        ristorantePatona.aggiungiPrenotazioni(Alberto);
+        ristorantePatona.aggiungiPrenotazioni(Ludmilla);
+        ristorantePatona.aggiungiPrenotazioni(Francesco);
+        ristorantePatona.aggiungiPrenotazioni(Paolo);
+        ristorantePatona.aggiungiPrenotazioni(Roselia);
+
+        // stampo la lista di prenotazioni
+        ristorantePatona.stampaListaDiPrenotazioni();
+
+        //rimuovo un cliente
+        ristorantePatona.rimuoviPrenotazione(3);
+
+
+        //Ristorante Lumière
+        Ristorante ristoranteLumiere = new Ristorante("Lumière" ,"Napoli",50);
+
+        //Stampa menu del ristorante Lumière
+        ristoranteLumiere.aggiungiMenu(menuCarne);
+        ristoranteLumiere.stampaMenuCompleto();
+
 
         // aggiungo clienti
         Cliente iresha = new Cliente("Iresha", "Warnakulasuriya", 3);
@@ -84,18 +116,17 @@ public class Main {
         Cliente santo = new Cliente("Santo", "Rocca", 10);
 
         // creo la mappa per prenotazioni
-        Ristorante prenotazioniRistoranteLumiere = new Ristorante("Lumière" ,"Napoli",50);
-        prenotazioniRistoranteLumiere.aggiungiPrenotazioni(iresha);
-        prenotazioniRistoranteLumiere.aggiungiPrenotazioni(michele);
-        prenotazioniRistoranteLumiere.aggiungiPrenotazioni(riccardo);
-        prenotazioniRistoranteLumiere.aggiungiPrenotazioni(andrea);
-        prenotazioniRistoranteLumiere.aggiungiPrenotazioni(santo);
+        ristoranteLumiere.aggiungiPrenotazioni(iresha);
+        ristoranteLumiere.aggiungiPrenotazioni(michele);
+        ristoranteLumiere.aggiungiPrenotazioni(riccardo);
+        ristoranteLumiere.aggiungiPrenotazioni(andrea);
+        ristoranteLumiere.aggiungiPrenotazioni(santo);
 
         // stampo la lista di prenotazioni
-        prenotazioniRistoranteLumiere.stampaListaDiPrenotazioni();
+        ristoranteLumiere.stampaListaDiPrenotazioni();
 
         //rimuovo un cliente
-        prenotazioniRistoranteLumiere.rimuoviPrenotazione(4);
+        ristoranteLumiere.rimuoviPrenotazione(4);
 
 
 

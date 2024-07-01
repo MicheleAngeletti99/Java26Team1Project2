@@ -96,7 +96,7 @@ public class Ristorante {
             idCliente++;
             copertiDisponibili = copertiDisponibili - cliente.getNumeroDiCoperti();
         } else {
-            System.out.println("Coperti non disponibili");
+            System.out.println(cliente.getNome() + ", il numero dei coperti richiesto non è disponibile");
         }
     }
 

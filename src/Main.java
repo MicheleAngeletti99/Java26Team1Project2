@@ -82,9 +82,9 @@ public class Main {
         // aggiungo clienti
         Cliente Alberto = new Cliente("Alberto", "Pippa", 11);
         Cliente Ludmilla = new Cliente("Ludmilla", "Santo", 5);
-        Cliente Francesco = new Cliente("Francesco", "cavaleri", 6);
+        Cliente Francesco = new Cliente("Francesco", "cavaleri", 10);
         Cliente Paolo = new Cliente("Paolo", "Vecchione", 7);
-        Cliente Roselia = new Cliente("Roselia", "Rocca", 10);
+        Cliente Roselia = new Cliente("Rosalia", "Rocca", 2);
 
         // creo la mappa per prenotazioni
         ristorantePatona.aggiungiPrenotazioni(Alberto);

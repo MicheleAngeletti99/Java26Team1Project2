@@ -69,14 +69,14 @@ public class Main {
         menuCarne.aggiungiPortata(new Bevande("Aranciata", 3.50, "Spremuta di arancia frizzante", "Arancia zucchero e anidridecarbonica", 2024, false) );
         menuCarne.modificaPrezzo(vinoRosso, 10.50);
 
-        //stampo il menu di carne
-        menuCarne.stampaMenu();
-
         // Ristorante Patona
         Ristorante ristorantePatona = new Ristorante("Patona", "Palermo", 30);
 
         //Stampa menu carne del ristorante Patona
         ristorantePatona.aggiungiMenu(menuCarne);
+        ristorantePatona.stampaTipoMenu(TipoMenu.CARNE);
+
+        // Stampa menu completo del ristorante Patona
         ristorantePatona.stampaMenuCompleto();
 
         // aggiungo clienti
@@ -127,8 +127,6 @@ public class Main {
 
         //rimuovo un cliente
         ristoranteLumiere.rimuoviPrenotazione(4);
-
-
 
     }
 }

@@ -50,7 +50,21 @@ public class Ristorante {
 
     // il metodo per aggiungere menu
     public void aggiungiMenu(Menu menu) {
-        listaMenu.add(menu);
+        // variabile per salvare se c'è un menu dello stesso tipo
+        boolean isThere = false;
+        // controllo che ci sia un menu per ogni tipo
+        for (Menu checkMenu : listaMenu) {
+            if (menu.getTipo() == checkMenu.getTipo()) {
+                // se trovo un menu dello stesso tipo di quello che sto inserendo me lo salvo
+                isThere = true;
+            }
+        }
+        if (isThere) {
+            System.out.println("Esiste già un " + menu.getTipo().getDescrizione() +
+                    " si prega di aggiornare quello già esistente");
+        } else {
+            listaMenu.add(menu);
+        }
     }
 
     // il metodo per rimuovere menu
@@ -58,6 +72,7 @@ public class Ristorante {
         listaMenu.remove(menu);
     }
 
+    // metodo per stampare tutte le portate di tutti i menu del ristorante
     public void stampaMenuCompleto() {
         // Inizializzo un menu che conterrà tutte le portate disponibili
         Menu menuCompleto = new Menu(TipoMenu.COMPLETO);
@@ -75,6 +90,23 @@ public class Ristorante {
         // Stampo il menu completo con il suo metodo
         menuCompleto.stampaMenu();
 
+    }
+
+    // metodo per stampare un tipo di menu particolare
+    public void stampaTipoMenu(TipoMenu tipo) {
+        // se viene richiesto il menu completo invoco il metodo apposito
+        if (tipo == TipoMenu.COMPLETO) {
+            stampaMenuCompleto();
+        } else {
+            // cerco il menu nella listaMenu confrontando il tipo
+            for (Menu menu : listaMenu) {
+                if (menu.getTipo() == tipo) {
+                    // una volta trovato lo stampo
+                    menu.stampaMenu();
+                    break;
+                }
+            }
+        }
     }
 
     // metodo per gestire Overbooking, faccio comparazione fra coperti disponibili e coperti richiesti dal cliente

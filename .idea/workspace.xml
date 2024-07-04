@@ -5,15 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="967428fe-9716-472c-a46e-a43fb2834770" name="Changes" comment="Aggiunto metodo stampaTipoMenu e controllo sul metodo aggiungiMenu">
+      <change afterPath="$PROJECT_DIR$/src/Prenotazione.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Antipasti.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Antipasti.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Bevande.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Bevande.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Desserts.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Desserts.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Menu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Portata.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Portata.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Primi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Primi.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Secondi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Secondi.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/enumarazioni/Colori.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/enumarazioni/Colori.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Cliente.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Cliente.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Ristorante.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Ristorante.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,7 +45,7 @@
     "Application.Main.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "pulizia-stampaMenu",
+    "git-widget-placeholder": "classe-prenotazione",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
     "project.structure.last.edited": "Modules",
@@ -99,7 +94,15 @@
       <option name="project" value="LOCAL" />
       <updated>1719569687449</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Pulizia del codice">
+      <option name="closed" value="true" />
+      <created>1720106845073</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1720106845073</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -144,6 +147,7 @@
     <MESSAGE value="creata classe secondi" />
     <MESSAGE value="formattazione" />
     <MESSAGE value="aggiunto il classe cliente e la mappa prenotazione e id prenotazione" />
-    <option name="LAST_COMMIT_MESSAGE" value="aggiunto il classe cliente e la mappa prenotazione e id prenotazione" />
+    <MESSAGE value="Pulizia del codice" />
+    <option name="LAST_COMMIT_MESSAGE" value="Pulizia del codice" />
   </component>
 </project>

@@ -147,4 +147,9 @@ public class Ristorante {
             prenotazione.get(identites).stampaDettagli();
         }
     }
+
+    // metodo per stampare i dettagli del ristorante
+    public void stampaDettagli() {
+        System.out.println("Ristorante " + nome + " di " + citta);
+    }
 }

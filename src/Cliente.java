@@ -40,7 +40,7 @@ public class Cliente {
 
     // methodo per stampare gli dettagli del classe cliente
     public  void stampaDettagli(){
-        System.out.println("NOME: " +this.nome + " COGNOME: " + this.cognome + " NUMERO DI COPERTI: " + this.numeroDiCoperti +"\n");
+        System.out.println(this.nome + " " + this.cognome);
     }
 
 

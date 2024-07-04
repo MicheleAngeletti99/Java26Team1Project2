@@ -3,14 +3,14 @@ import enumarazioni.TipoMenu;
 
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.HashSet;
 
 public class Ristorante {
     // gli field
     private String nome;
     private String citta;
     private ArrayList<Menu> listaMenu;
-    private Integer idCliente = 1;
-    private HashMap<Integer, Cliente> prenotazione;
+    private HashSet<Prenotazione> listaPrenotazioni;
     private Integer copertiDisponibili;
 
     // il costruttore
@@ -18,7 +18,7 @@ public class Ristorante {
         this.nome = nome;
         this.citta = citta;
         this.listaMenu = new ArrayList<>();
-        this.prenotazione = new HashMap<>();
+        this.listaPrenotazioni = new HashSet<>();
         this.copertiDisponibili = copertiDisponibili;
     }
 
@@ -89,7 +89,6 @@ public class Ristorante {
         }
         // Stampo il menu completo con il suo metodo
         menuCompleto.stampaMenu();
-
     }
 
     // metodo per stampare un tipo di menu particolare
@@ -112,8 +111,8 @@ public class Ristorante {
     // metodo per gestire Overbooking, faccio comparazione fra coperti disponibili e coperti richiesti dal cliente
     // true quando i coperti richiesti dal cliente rientrano nella disponibilità dei coperti del ristornate
     // false quando i coperti richiesti dal cliente non rientrano nella disponibilità
-    private boolean gestioneOverbooking(Cliente cliente) {
-        if (copertiDisponibili >= cliente.getNumeroDiCoperti()) {
+    private boolean gestioneOverbooking(Prenotazione prenotazione) {
+        if (copertiDisponibili >= prenotazione.getNumeroCoperti()) {
             return true;
         } else {
             return false;
@@ -122,34 +121,31 @@ public class Ristorante {
 
     // metodo per aggiungere prenotazione
     // se la gestioneOverbooking sarà true, verranno aggiunti i coperti prenotati e i coperti diponibili del ristornate verranno diminuiti
-    public void aggiungiPrenotazioni(Cliente cliente) {
-        if (gestioneOverbooking(cliente)) {
-            prenotazione.put(idCliente, cliente);
-            idCliente++;
-            copertiDisponibili = copertiDisponibili - cliente.getNumeroDiCoperti();
+    public void aggiungiPrenotazioni(Prenotazione prenotazione) {
+        // controllo se posso aggiungere la prenotazione
+        if (!gestioneOverbooking(prenotazione)) { // se va in overbooking
+            System.out.println(prenotazione.getCliente().getNome() + ", il numero dei coperti richiesto non è disponibile");
+        } else if (!prenotazione.getRistorante().equals(this)) {
+            System.out.println("La prenotazione è stata fatta per un altro ristorante");
         } else {
-            System.out.println(cliente.getNome() + ", il numero dei coperti richiesto non è disponibile");
+            listaPrenotazioni.add(prenotazione);
+            copertiDisponibili = copertiDisponibili - prenotazione.getNumeroCoperti();
         }
     }
 
     // il metodo per rimuovere prenotazione
     // gestione overbooking, ad ogni coperto rimosso i coperti diponibili del ristorante verranno aumentati
-    public void rimuoviPrenotazione(Integer id) {
-        copertiDisponibili = copertiDisponibili + prenotazione.get(id).getNumeroDiCoperti();
-        prenotazione.remove(id);
+    public void rimuoviPrenotazione(Prenotazione prenotazione) {
+        copertiDisponibili = copertiDisponibili + prenotazione.getNumeroCoperti();
+        listaPrenotazioni.remove(prenotazione);
     }
 
     // il metodo per stampare la lista di prenotazione
     public void stampaListaDiPrenotazioni() {
         System.out.println("      LISTA DI PRENOTAZIONI " + "\n");
-        for (Integer identites : prenotazione.keySet()) {
-            System.out.println("ID prenotazione: " + identites);
-            prenotazione.get(identites).stampaDettagli();
+        for (Prenotazione prenotazione : listaPrenotazioni) {
+            prenotazione.stampaDettagli();
+            System.out.println();
         }
-    }
-
-    // metodo per stampare i dettagli del ristorante
-    public void stampaDettagli() {
-        System.out.println("Ristorante " + nome + " di " + citta);
     }
 }

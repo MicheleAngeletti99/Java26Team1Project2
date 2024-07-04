@@ -5,7 +5,6 @@ public class Prenotazione {
     private Cliente cliente;
     private Ristorante ristorante;
     private Integer numeroCoperti;
-    private boolean isActive;
 
     // costruttore
     public Prenotazione(Cliente cliente, Ristorante ristorante, Integer numeroCoperti) {
@@ -14,7 +13,6 @@ public class Prenotazione {
         this.cliente = cliente;
         this.ristorante = ristorante;
         this.numeroCoperti = numeroCoperti;
-        this.isActive = true;
     }
 
     // getters e setters
@@ -46,21 +44,11 @@ public class Prenotazione {
         this.numeroCoperti = numeroCoperti;
     }
 
-    public boolean isActive() {
-        return isActive;
-    }
-
-    public void setActive(boolean active) {
-        isActive = active;
-    }
-
     // metodo per stampare i dettagli
     public void stampaDettagli() {
         System.out.println("Prenotazione " + id + ": ");
         System.out.print("Cliente: ");
         cliente.stampaDettagli();
-        System.out.print("Ristorante: ");
-        ristorante.stampaDettagli();
         System.out.println("Numero di coperti: " + numeroCoperti);
     }
 }

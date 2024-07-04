@@ -3,6 +3,8 @@ import enumarazioni.Colori;
 public class Primi extends Portata {
     private String cottura;
     private String  regioneProvenienza;
+    // campo che determina il colore
+    private static String colore = Colori.GIALLO.getColore();
 
     public Primi(String nome, Double prezzo, String descrizione, String ingredienti, String cottura, String regioneProvenienza) {
         super(nome, prezzo, descrizione, ingredienti);
@@ -26,9 +28,9 @@ public class Primi extends Portata {
         this.regioneProvenienza = regioneProvenienza;
     }
 
-    @Override
-    public String stampaColore() {
-        return Colori.GIALLO.getColore();
+    // metodo per cambiare il colore
+    public static void cambiaColore() {
+        System.out.println(colore);
     }
 
     @Override

@@ -43,49 +43,53 @@ public class Menu {
     // stampaMenu
 
     public void stampaMenu() {
+        // stampa del titolo
         System.out.println(tipo.getDescrizione());
+        // stampa degli antipasti
         System.out.println("\nANTIPASTI: ");
+        Antipasti.cambiaColore();
         for (Portata portata : listaPortate) {
             if (portata instanceof Antipasti) {
-                System.out.print(portata.stampaColore());
                 portata.stampaDettagli();
             }
-            System.out.print(Colori.RESET.getColore());
         }
-
+        Colori.resetColore();
+        // stampa dei primi
         System.out.println("\nPRIMI: ");
+        Primi.cambiaColore();
         for (Portata portata : listaPortate) {
             if (portata instanceof Primi) {
-                System.out.print(portata.stampaColore());
                 portata.stampaDettagli();
             }
-            System.out.print(Colori.RESET.getColore());
         }
+        Colori.resetColore();
+        // stampa dei secondi
         System.out.println("\nSECONDI: ");
+        Secondi.cambiaColore();
         for (Portata portata : listaPortate) {
             if (portata instanceof Secondi) {
-                System.out.print(portata.stampaColore());
                 portata.stampaDettagli();
             }
-            System.out.print(Colori.RESET.getColore());
         }
+        Colori.resetColore();
+        // stampa dei desserts
         System.out.println("\nDESSERTS: ");
+        Desserts.cambiaColore();
         for (Portata portata : listaPortate) {
             if (portata instanceof Desserts) {
-                System.out.print(portata.stampaColore());
                 portata.stampaDettagli();
             }
-            System.out.print(Colori.RESET.getColore());
         }
+        Colori.resetColore();
+        // stampa delle bevande
         System.out.println("\nBEVANDE: ");
+        Bevande.cambiaColore();
         for (Portata portata : listaPortate) {
             if (portata instanceof Bevande) {
-                System.out.print(portata.stampaColore());
                 portata.stampaDettagli();
             }
-            System.out.print(Colori.RESET.getColore());
         }
-
+        Colori.resetColore();
     }
 
 }

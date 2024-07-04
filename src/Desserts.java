@@ -3,6 +3,8 @@ import enumarazioni.Colori;
 public class Desserts extends Portata {
      // i field
     private Boolean glutenFree;
+    // campo che determina il colore
+    private static String colore = Colori.VIOLA.getColore();
 
     // override dei costruttore
     public Desserts(String nome, Double prezzo, String descrizione, String ingredienti,Boolean glutenFree) {
@@ -11,8 +13,6 @@ public class Desserts extends Portata {
     }
 
     // getter and setter
-
-
     public Boolean getGlutenFree() {
         return glutenFree;
     }
@@ -21,13 +21,12 @@ public class Desserts extends Portata {
         this.glutenFree = glutenFree;
     }
 
-    @Override
-    public String stampaColore() {
-        return Colori.VIOLA.getColore();
+    // metodo per cambiare il colore
+    public static void cambiaColore() {
+        System.out.println(colore);
     }
 
     // override il metodo stampadettagli dal superclass
-
     @Override
     public void stampaDettagli() {
         super.stampaDettagli();

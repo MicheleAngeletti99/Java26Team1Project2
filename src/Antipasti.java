@@ -2,7 +2,8 @@ import enumarazioni.Colori;
 
 public class Antipasti extends Portata {
     private String origineProdotto;
-
+    // campo che determina il colore
+    private static String colore = Colori.VERDE.getColore();
 
     public Antipasti(String nome, Double prezzo, String descrizione, String ingredienti, String origineProdotto) {
         super(nome, prezzo, descrizione, ingredienti);
@@ -19,9 +20,9 @@ public class Antipasti extends Portata {
         this.origineProdotto = origineProdotto;
     }
 
-    @Override
-    public String stampaColore() {
-        return Colori.VERDE.getColore();
+    // metodo per cambiare il colore
+    public static void cambiaColore() {
+        System.out.println(colore);
     }
 
     @Override

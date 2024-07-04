@@ -4,13 +4,15 @@ public class Bevande extends Portata {
 
     private Integer annoDiProduzione;
     private Boolean certificazioneDOP;
+    // campo che determina il colore
+    private static String colore = Colori.BLU.getColore();
 
     public Bevande(String nome, Double prezzo, String descrizione, String ingredienti, Integer annoDiProduzione, Boolean certificazioneDOP) {
         super(nome, prezzo, descrizione, ingredienti);
         this.annoDiProduzione = annoDiProduzione;
         this.certificazioneDOP = certificazioneDOP;
     }
-
+    // getters e setters
     public Integer getAnnoDiProduzione() {
         return annoDiProduzione;
     }
@@ -27,9 +29,9 @@ public class Bevande extends Portata {
         this.certificazioneDOP = certificazioneDOP;
     }
 
-    @Override
-    public String stampaColore() {
-        return Colori.BLU.getColore();
+    // metodo per cambiare il colore
+    public static void cambiaColore() {
+        System.out.println(colore);
     }
 
     @Override

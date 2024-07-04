@@ -65,8 +65,6 @@ public abstract class Portata {
         System.out.println(ingredienti);
     }
 
-    public abstract String stampaColore();
-
     // Faccio Override di equals e hashCode così due portate saranno uguali se hanno gli stessi valori nei campi
     @Override
     public boolean equals(Object o) {

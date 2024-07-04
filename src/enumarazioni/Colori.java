@@ -19,4 +19,9 @@ public enum Colori {
     public String getColore(){
         return colore;
     }
+
+    // metodo per resettare il colore
+    public static void resetColore() {
+        System.out.println(RESET.colore);
+    }
 }

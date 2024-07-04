@@ -95,7 +95,7 @@ public class Main {
 
         // stampo la lista di prenotazioni
         ristorantePatona.stampaListaDiPrenotazioni();
-
+        ristorantePatona.mostraCopertiDisponibili();
         //rimuovo un cliente
         ristorantePatona.rimuoviPrenotazione(3);
 
@@ -124,6 +124,7 @@ public class Main {
 
         // stampo la lista di prenotazioni
         ristoranteLumiere.stampaListaDiPrenotazioni();
+        ristoranteLumiere.mostraCopertiDisponibili();
 
         //rimuovo un cliente
         ristoranteLumiere.rimuoviPrenotazione(4);

@@ -131,12 +131,15 @@ public class Ristorante {
             System.out.println(cliente.getNome() + ", il numero dei coperti richiesto non è disponibile");
         }
     }
-
     // il metodo per rimuovere prenotazione
     // gestione overbooking, ad ogni coperto rimosso i coperti diponibili del ristorante verranno aumentati
     public void rimuoviPrenotazione(Integer id) {
         copertiDisponibili = copertiDisponibili + prenotazione.get(id).getNumeroDiCoperti();
         prenotazione.remove(id);
+    }
+    //metodo per visualizzare quanti sono i coperti disponibili
+    public void mostraCopertiDisponibili(){
+        System.out.println("Coperti disponibili: " + copertiDisponibili);
     }
 
     // il metodo per stampare la lista di prenotazione

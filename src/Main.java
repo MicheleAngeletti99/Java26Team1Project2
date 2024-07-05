@@ -127,7 +127,7 @@ public class Main {
         Prenotazione prenotazioneMichele = new Prenotazione(michele, ristoranteLumiere, 10);
         Prenotazione prenotazioneRiccardo = new Prenotazione(riccardo, ristoranteLumiere, 2);
         Prenotazione prenotazioneAndrea = new Prenotazione(andrea, ristoranteLumiere, 7);
-        Prenotazione prenotazioneSanto = new Prenotazione(iresha, ristoranteLumiere, 10);
+        Prenotazione prenotazioneSanto = new Prenotazione(santo, ristoranteLumiere, 10);
 
         // creo la mappa per prenotazioni
         ristoranteLumiere.aggiungiPrenotazioni(prenotazioneIresha);

@@ -125,9 +125,9 @@ public class Ristorante {
         // controllo se posso aggiungere la prenotazione
         if (!gestioneOverbooking(prenotazione)) { // se va in overbooking
             System.out.println(prenotazione.getCliente().getNome() + ", il numero dei coperti richiesto non è disponibile");
-        } else if (!prenotazione.getRistorante().equals(this)) {
+        } else if (!prenotazione.getRistorante().equals(this)) { // se il ristorante non è lo stesso della prenotazione
             System.out.println("La prenotazione è stata fatta per un altro ristorante");
-        } else {
+        } else { // se non ci sono problemi
             listaPrenotazioni.add(prenotazione);
             copertiDisponibili = copertiDisponibili - prenotazione.getNumeroCoperti();
         }

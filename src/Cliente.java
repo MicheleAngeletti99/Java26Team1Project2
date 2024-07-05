@@ -3,17 +3,14 @@ public class Cliente {
     // gli field
     private String nome;
     private String cognome;
-    private Integer numeroDiCoperti;
 
     // il costruttore
-    public Cliente(String nome,String cognome,Integer numeroDiCoperti){
+    public Cliente(String nome,String cognome){
         this.nome = nome;
         this.cognome = cognome;
-        this.numeroDiCoperti = numeroDiCoperti;
     }
 
     // i getter e setter
-
     public String getNome() {
         return nome;
     }
@@ -30,17 +27,10 @@ public class Cliente {
         this.cognome = cognome;
     }
 
-    public Integer getNumeroDiCoperti() {
-        return numeroDiCoperti;
-    }
-
-    public void setNumeroDiCoperti(Integer numeroDiCoperti) {
-        this.numeroDiCoperti = numeroDiCoperti;
-    }
 
     // methodo per stampare gli dettagli del classe cliente
     public  void stampaDettagli(){
-        System.out.println("NOME: " +this.nome + " COGNOME: " + this.cognome + " NUMERO DI COPERTI: " + this.numeroDiCoperti +"\n");
+        System.out.println(this.nome + " " + this.cognome);
     }
 
 

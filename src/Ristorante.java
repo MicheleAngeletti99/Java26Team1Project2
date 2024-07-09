@@ -154,6 +154,8 @@ public class Ristorante {
             System.out.println();
         }
     }
+
+    //Metodo per aggiungere dei dati aggiuntivi al ristorante
     public void stampaDettagliRistorante() {
         System.out.println("\n NOME : " + nome );
         System.out.println("CITTà : " + citta);

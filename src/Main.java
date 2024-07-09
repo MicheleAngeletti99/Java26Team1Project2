@@ -1,5 +1,6 @@
 import enumarazioni.Colori;
 import enumarazioni.Cottura;
+import enumarazioni.TipoChef;
 import enumarazioni.TipoMenu;
 
 import java.util.HashMap;
@@ -70,13 +71,14 @@ public class Main {
         menuCarne.modificaPrezzo(vinoRosso, 10.50);
 
         // Ristorante Patona
-        Ristorante ristorantePatona = new Ristorante("Patona", "Palermo", 30);
+        Ristorante ristorantePatona = new Ristorante("Patona", "Palermo", 30, TipoChef.Riccardo);
 
         //Stampa menu carne del ristorante Patona
         ristorantePatona.aggiungiMenu(menuCarne);
         ristorantePatona.stampaTipoMenu(TipoMenu.CARNE);
 
         // Stampa menu completo del ristorante Patona
+        ristorantePatona.stampaDettagliRistorante();
         ristorantePatona.stampaMenuCompleto();
 
         // aggiungo clienti
@@ -108,11 +110,15 @@ public class Main {
 
 
         //Ristorante Lumière
-        Ristorante ristoranteLumiere = new Ristorante("Lumière" ,"Napoli",50);
+        Ristorante ristoranteLumiere = new Ristorante("Lumière" ,"Napoli",50,TipoChef.Michele);
 
         //Stampa menu del ristorante Lumière
+        ristoranteLumiere.stampaDettagliRistorante();
         ristoranteLumiere.aggiungiMenu(menuCarne);
         ristoranteLumiere.stampaMenuCompleto();
+
+
+
 
 
         // aggiungo clienti

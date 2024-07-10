@@ -143,7 +143,8 @@ public class Ristorante {
     }
     //metodo per visualizzare quanti sono i coperti disponibili
     public void mostraCopertiDisponibili(){
-        System.out.println("Coperti disponibili: " + copertiDisponibili);
+        System.out.println("\033[0;34mCoperti disponibili: " + copertiDisponibili);
+        Colori.resetColore();
     }
 
     // il metodo per stampare la lista di prenotazione
@@ -157,7 +158,7 @@ public class Ristorante {
 
     //Metodo per aggiungere dei dati aggiuntivi al ristorante
     public void stampaDettagliRistorante() {
-        System.out.println("\n NOME : " + nome );
+        System.out.println("\nNOME RISTORANTE : " + nome );
         System.out.println("CITTà : " + citta);
         System.out.println("CHEF : " + chef);
         System.out.println("COPERTIDISPONIBILI : " + copertiDisponibili);

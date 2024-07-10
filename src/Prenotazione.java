@@ -1,3 +1,5 @@
+import enumarazioni.StatusPrenotazione;
+
 public class Prenotazione {
     // i campi
     private static Integer collectiveId = 1;
@@ -5,6 +7,8 @@ public class Prenotazione {
     private Cliente cliente;
     private Ristorante ristorante;
     private Integer numeroCoperti;
+    private StatusPrenotazione statoPrenotazione;
+
 
     // costruttore
     public Prenotazione(Cliente cliente, Ristorante ristorante, Integer numeroCoperti) {
@@ -44,11 +48,24 @@ public class Prenotazione {
         this.numeroCoperti = numeroCoperti;
     }
 
+    public StatusPrenotazione getStatoPrenotazione() {
+        return statoPrenotazione;
+    }
+
+    public void setStatoPrenotazione(StatusPrenotazione statoPrenotazione) {
+        this.statoPrenotazione = statoPrenotazione;
+    }
+
     // metodo per stampare i dettagli
     public void stampaDettagli() {
         System.out.println("Prenotazione " + id + ": ");
         System.out.print("Cliente: ");
         cliente.stampaDettagli();
         System.out.println("Numero di coperti: " + numeroCoperti);
+        System.out.println("Stato prenotazione: " + statoPrenotazione.getDescrizione());
     }
+
+    // metodo prenotazione per visualizzare chi è stato rimosso o ha una prenotazione attiva
+
+
 }

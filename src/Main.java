@@ -143,5 +143,8 @@ public class Main {
         //rimuovo un cliente
         ristoranteLumiere.rimuoviPrenotazione(prenotazioneAndrea);
 
+        ristoranteLumiere.stampaListaDiPrenotazioni();
+
+
     }
 }

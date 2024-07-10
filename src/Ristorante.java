@@ -1,8 +1,7 @@
-import enumarazioni.Colori;
+import enumarazioni.StatusPrenotazione;
 import enumarazioni.TipoMenu;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.HashSet;
 
 public class Ristorante {
@@ -123,12 +122,18 @@ public class Ristorante {
     // se la gestioneOverbooking sarà true, verranno aggiunti i coperti prenotati e i coperti diponibili del ristornate verranno diminuiti
     public void aggiungiPrenotazioni(Prenotazione prenotazione) {
         // controllo se posso aggiungere la prenotazione
-        if (!gestioneOverbooking(prenotazione)) { // se va in overbooking
-            System.out.println(prenotazione.getCliente().getNome() + ", il numero dei coperti richiesto non è disponibile");
-        } else if (!prenotazione.getRistorante().equals(this)) { // se il ristorante non è lo stesso della prenotazione
-            System.out.println("La prenotazione è stata fatta per un altro ristorante");
-        } else { // se non ci sono problemi
+        if (!gestioneOverbooking(prenotazione)) {
+            // se va in overbooking
             listaPrenotazioni.add(prenotazione);
+            prenotazione.setStatoPrenotazione(StatusPrenotazione.RIMOSSO);
+            System.out.println(prenotazione.getCliente().getNome() + ", il numero dei coperti richiesto non è disponibile");
+        } else if (!prenotazione.getRistorante().equals(this)) {
+            // se il ristorante non è lo stesso della prenotazione
+            System.out.println("La prenotazione è stata fatta per un altro ristorante");
+        } else {
+            // se non ci sono problemi
+            listaPrenotazioni.add(prenotazione);
+            prenotazione.setStatoPrenotazione(StatusPrenotazione.ATTIVO);
             copertiDisponibili = copertiDisponibili - prenotazione.getNumeroCoperti();
         }
     }
@@ -136,7 +141,7 @@ public class Ristorante {
     // gestione overbooking, ad ogni coperto rimosso i coperti diponibili del ristorante verranno aumentati
     public void rimuoviPrenotazione(Prenotazione prenotazione) {
         copertiDisponibili = copertiDisponibili + prenotazione.getNumeroCoperti();
-        listaPrenotazioni.remove(prenotazione);
+        prenotazione.setStatoPrenotazione(StatusPrenotazione.RIMOSSO);
     }
     //metodo per visualizzare quanti sono i coperti disponibili
     public void mostraCopertiDisponibili(){
@@ -149,6 +154,8 @@ public class Ristorante {
         for (Prenotazione prenotazione : listaPrenotazioni) {
             prenotazione.stampaDettagli();
             System.out.println();
+
         }
     }
+
 }

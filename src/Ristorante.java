@@ -1,4 +1,5 @@
 import enumarazioni.Colori;
+import enumarazioni.TipoChef;
 import enumarazioni.TipoMenu;
 
 import java.util.ArrayList;
@@ -12,14 +13,16 @@ public class Ristorante {
     private ArrayList<Menu> listaMenu;
     private HashSet<Prenotazione> listaPrenotazioni;
     private Integer copertiDisponibili;
+    private TipoChef chef;
 
     // il costruttore
-    public Ristorante(String nome, String citta, Integer copertiDisponibili) {
+    public Ristorante(String nome, String citta, Integer copertiDisponibili, TipoChef chef) {
         this.nome = nome;
         this.citta = citta;
         this.listaMenu = new ArrayList<>();
         this.listaPrenotazioni = new HashSet<>();
         this.copertiDisponibili = copertiDisponibili;
+        this.chef = chef;
     }
 
     // i getter e setter
@@ -150,5 +153,14 @@ public class Ristorante {
             prenotazione.stampaDettagli();
             System.out.println();
         }
+    }
+
+    //Metodo per aggiungere dei dati aggiuntivi al ristorante
+    public void stampaDettagliRistorante() {
+        System.out.println("\n NOME : " + nome );
+        System.out.println("CITTà : " + citta);
+        System.out.println("CHEF : " + chef);
+        System.out.println("COPERTIDISPONIBILI : " + copertiDisponibili);
+
     }
 }

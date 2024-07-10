@@ -5,19 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="967428fe-9716-472c-a46e-a43fb2834770" name="Changes" comment="formattazione">
-      <change afterPath="$PROJECT_DIR$/src/enumarazioni/Colori.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/enumarazioni/Cottura.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Antipasti.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Antipasti.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Bevande.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Bevande.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Desserts.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Desserts.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Menu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Portata.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Portata.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Primi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Primi.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Ristorante.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Ristorante.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Secondi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Secondi.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/TipoMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/enumarazioni/TipoMenu.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,7 +43,7 @@
     "Application.Main.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "colori",
+    "git-widget-placeholder": "stampaMenuPerTipo",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
     "project.structure.last.edited": "Modules",

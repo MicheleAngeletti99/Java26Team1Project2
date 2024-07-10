@@ -66,11 +66,13 @@ public class Main {
         menuCarne.aggiungiPortata(new Bevande("Aranciata", 3.50, "Spremuta di arancia frizzante", "Arancia zucchero e anidridecarbonica", 2024, false) );
         menuCarne.modificaPrezzo(vinoRosso, 10.50);
 
-        //stampo il menu di carne
-        menuCarne.stampaMenu();
-
         // Ristorante
         Ristorante ristorantePatona = new Ristorante("Patona", "Palermo");
         ristorantePatona.aggiungiMenu(menuCarne);
+
+        //stampo il menu di carne
+        ristorantePatona.stampaMenuPerTipo(TipoMenu.CARNE);
+
+
     }
 }

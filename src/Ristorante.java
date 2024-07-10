@@ -55,4 +55,14 @@ public class Ristorante {
         // Stampo il menu completo con il suo metodo
         menuCompleto.stampaMenu();
     }
+
+    public void stampaMenuPerTipo(TipoMenu type){
+        //cicliamo tutti i menu per trovare quello col tipo interessato
+        for (Menu menu : listaMenu){
+            //una volta trovato lo stampiamo con la sua funzione
+            if(menu.getTipo().equals(type)){
+                menu.stampaMenu();
+            }
+        }
+    }
 }

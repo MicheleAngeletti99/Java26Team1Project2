@@ -89,11 +89,11 @@ public class Main {
         Cliente roselia = new Cliente("Rosalia", "Rocca");
 
         // aggiungo prenotazioni
-        Prenotazione prenotazioneAlberto = new Prenotazione(alberto, ristorantePatona, 11);
-        Prenotazione prenotazioneLudmilla = new Prenotazione(ludmilla, ristorantePatona, 5);
-        Prenotazione prenotazioneFrancesco = new Prenotazione(francesco, ristorantePatona, 10);
-        Prenotazione prenotazionePaolo = new Prenotazione(paolo, ristorantePatona, 7);
-        Prenotazione prenotazioneRoselia = new Prenotazione(roselia, ristorantePatona, 2);
+        Prenotazione prenotazioneAlberto = new Prenotazione(alberto, 11);
+        Prenotazione prenotazioneLudmilla = new Prenotazione(ludmilla, 5);
+        Prenotazione prenotazioneFrancesco = new Prenotazione(francesco, 10);
+        Prenotazione prenotazionePaolo = new Prenotazione(paolo, 7);
+        Prenotazione prenotazioneRoselia = new Prenotazione(roselia, 2);
 
         // creo la mappa per prenotazioni
         ristorantePatona.aggiungiPrenotazioni(prenotazioneAlberto);
@@ -129,11 +129,11 @@ public class Main {
         Cliente santo = new Cliente("Santo", "Rocca");
 
         // aggiungo prenotazioni
-        Prenotazione prenotazioneIresha = new Prenotazione(iresha, ristoranteLumiere, 3);
-        Prenotazione prenotazioneMichele = new Prenotazione(michele, ristoranteLumiere, 10);
-        Prenotazione prenotazioneRiccardo = new Prenotazione(riccardo, ristoranteLumiere, 2);
-        Prenotazione prenotazioneAndrea = new Prenotazione(andrea, ristoranteLumiere, 7);
-        Prenotazione prenotazioneSanto = new Prenotazione(santo, ristoranteLumiere, 10);
+        Prenotazione prenotazioneIresha = new Prenotazione(iresha, 3);
+        Prenotazione prenotazioneMichele = new Prenotazione(michele, 10);
+        Prenotazione prenotazioneRiccardo = new Prenotazione(riccardo, 2);
+        Prenotazione prenotazioneAndrea = new Prenotazione(andrea, 7);
+        Prenotazione prenotazioneSanto = new Prenotazione(santo, 10);
 
         // creo la mappa per prenotazioni
         ristoranteLumiere.aggiungiPrenotazioni(prenotazioneIresha);

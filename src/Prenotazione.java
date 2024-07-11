@@ -5,18 +5,17 @@ public class Prenotazione {
     private static Integer collectiveId = 1;
     private Integer id;
     private Cliente cliente;
-    private Ristorante ristorante;
     private Integer numeroCoperti;
     private StatusPrenotazione statoPrenotazione;
 
 
     // costruttore
-    public Prenotazione(Cliente cliente, Ristorante ristorante, Integer numeroCoperti) {
+    public Prenotazione(Cliente cliente, Integer numeroCoperti) {
         this.id = collectiveId;
         collectiveId++;
         this.cliente = cliente;
-        this.ristorante = ristorante;
         this.numeroCoperti = numeroCoperti;
+        this.statoPrenotazione = StatusPrenotazione.INATTIVO;
     }
 
     // getters e setters
@@ -30,14 +29,6 @@ public class Prenotazione {
 
     public void setCliente(Cliente cliente) {
         this.cliente = cliente;
-    }
-
-    public Ristorante getRistorante() {
-        return ristorante;
-    }
-
-    public void setRistorante(Ristorante ristorante) {
-        this.ristorante = ristorante;
     }
 
     public Integer getNumeroCoperti() {

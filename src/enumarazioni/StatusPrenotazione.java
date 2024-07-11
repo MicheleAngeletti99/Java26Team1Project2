@@ -1,6 +1,7 @@
 package enumarazioni;
 
 public enum StatusPrenotazione {
+    INATTIVO("prenotazione ancora non finita"),
     ATTIVO("prenotazione attivo"),
     RIMOSSO("prenotazione rimosso");
 

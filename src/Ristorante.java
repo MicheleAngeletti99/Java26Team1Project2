@@ -126,11 +126,11 @@ public class Ristorante {
     // se la gestioneOverbooking sarà true, verranno aggiunti i coperti prenotati e i coperti diponibili del ristornate verranno diminuiti
     public void aggiungiPrenotazioni(Prenotazione prenotazione) {
         // controllo se posso aggiungere la prenotazione
-        if (!gestioneOverbooking(prenotazione)) { // se va in overbooking
+        if (!gestioneOverbooking(prenotazione)) {
+            // se va in overbooking
             System.out.println(prenotazione.getCliente().getNome() + ", il numero dei coperti richiesto non è disponibile");
-        } else if (!prenotazione.getRistorante().equals(this)) { // se il ristorante non è lo stesso della prenotazione
-            System.out.println("La prenotazione è stata fatta per un altro ristorante");
-        } else { // se non ci sono problemi
+        } else {
+            // se non ci sono problemi
             listaPrenotazioni.add(prenotazione);
             copertiDisponibili = copertiDisponibili - prenotazione.getNumeroCoperti();
         }
@@ -143,7 +143,8 @@ public class Ristorante {
     }
     //metodo per visualizzare quanti sono i coperti disponibili
     public void mostraCopertiDisponibili(){
-        System.out.println("\033[0;34mCoperti disponibili: " + copertiDisponibili);
+        System.out.println(Colori.BLU.getColore());
+        System.out.println("Coperti disponibili: " + copertiDisponibili);
         Colori.resetColore();
     }
 

@@ -67,7 +67,7 @@ public class Main {
         menuCarne.aggiungiPortata(vinoBianco);
         menuCarne.aggiungiPortata(vinoRosso);
         menuCarne.aggiungiPortata(cocaCola);
-        menuCarne.aggiungiPortata(new Bevande("Aranciata", 3.50, "Spremuta di arancia frizzante", "Arancia zucchero e anidridecarbonica", 2024, false) );
+        menuCarne.aggiungiPortata(new Bevande("Aranciata", 3.50, "Spremuta di arancia frizzante", "Arancia zucchero e anidride carbonica", 2024, false) );
         menuCarne.modificaPrezzo(vinoRosso, 10.50);
 
         // Ristorante Patona

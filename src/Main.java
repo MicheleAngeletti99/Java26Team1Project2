@@ -124,9 +124,9 @@ public class Main {
         // aggiungo clienti
         Cliente iresha = new Cliente("Iresha", "Warnakulasuriya");
         Cliente michele = new Cliente("Michele", "Angeletti");
-        Cliente riccardo = new Cliente("Riccardo", "cavaleri");
+        Cliente riccardo = new Cliente("Riccardo", "Cavaleri");
         Cliente andrea = new Cliente("Andrea", "Vecchione");
-        Cliente santo = new Cliente("Santo", "Rocca");
+        Cliente santo = new Cliente("Santo", "La Rocca");
 
         // aggiungo prenotazioni
         Prenotazione prenotazioneIresha = new Prenotazione(iresha, 3);
@@ -146,11 +146,10 @@ public class Main {
         ristoranteLumiere.stampaListaDiPrenotazioni();
         ristoranteLumiere.mostraCopertiDisponibili();
 
-        //rimuovo un cliente
+        //rimuovo una prenotazione
         ristoranteLumiere.rimuoviPrenotazione(prenotazioneAndrea);
 
         ristoranteLumiere.stampaListaDiPrenotazioni();
-
 
     }
 }

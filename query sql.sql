@@ -29,3 +29,22 @@ where id in (1,2,3,4,5);
 update bevande 
 set prezzo = 10.50
 where nome like 'Vino rosso';
+
+# Creazione tabella clienti
+create table clienti (
+id INT primary key auto_increment,
+nome VARCHAR(50) not null,
+cognome VARCHAR(50) not null
+);
+# Inserimento dati nella tabella clienti
+insert into clienti (nome, cognome)
+values ('Alberto','Pippa'),
+       ('Ludmilla','Santo'),
+       ('Francesco','Cavaleri'),
+       ('Paolo','Vecchione'),
+       ('Rosalia','Rocca'),
+       ('Iresha','Warnakulasuriya'),
+       ('Michele','Angeletti'),
+       ('Riccardo','Cavaleri'),
+       ('Andrea','Vecchione'),
+       ('Santo','La Rocca');

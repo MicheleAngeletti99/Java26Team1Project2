@@ -1,4 +1,5 @@
 import enumarazioni.Colori;
+import enumarazioni.StatusPrenotazione;
 import enumarazioni.TipoChef;
 import enumarazioni.TipoMenu;
 
@@ -14,6 +15,7 @@ public class Ristorante {
     private HashSet<Prenotazione> listaPrenotazioni;
     private Integer copertiDisponibili;
     private TipoChef chef;
+
 
     // il costruttore
     public Ristorante(String nome, String citta, Integer copertiDisponibili, TipoChef chef) {
@@ -128,10 +130,13 @@ public class Ristorante {
         // controllo se posso aggiungere la prenotazione
         if (!gestioneOverbooking(prenotazione)) {
             // se va in overbooking
+            listaPrenotazioni.add(prenotazione);
+            prenotazione.setStatoPrenotazione(StatusPrenotazione.RIMOSSO);
             System.out.println(prenotazione.getCliente().getNome() + ", il numero dei coperti richiesto non è disponibile");
         } else {
             // se non ci sono problemi
             listaPrenotazioni.add(prenotazione);
+            prenotazione.setStatoPrenotazione(StatusPrenotazione.ATTIVO);
             copertiDisponibili = copertiDisponibili - prenotazione.getNumeroCoperti();
         }
     }
@@ -139,7 +144,7 @@ public class Ristorante {
     // gestione overbooking, ad ogni coperto rimosso i coperti diponibili del ristorante verranno aumentati
     public void rimuoviPrenotazione(Prenotazione prenotazione) {
         copertiDisponibili = copertiDisponibili + prenotazione.getNumeroCoperti();
-        listaPrenotazioni.remove(prenotazione);
+        prenotazione.setStatoPrenotazione(StatusPrenotazione.RIMOSSO);
     }
     //metodo per visualizzare quanti sono i coperti disponibili
     public void mostraCopertiDisponibili(){

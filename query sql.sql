@@ -133,3 +133,54 @@ primary key (menu_id, ristorante_id),
 foreign key (menu_id) references menu(id),
 foreign key (ristorante_id) references ristoranti(id)
 );
+
+# creazione tabella desserts
+create table desserts(
+Id int primary key auto_increment,
+menu_id INT,
+foreign key (menu_id) references menu(id),
+nome varchar (255),
+prezzo decimal (10,2),
+descrizione varchar(255),
+ingredienti varchar(255),
+glutenfree tinyint(0)
+);
+
+# inserire valori alla tabella dessert
+insert into desserts(nome, prezzo, descrizione, ingredienti,glutenfree)
+values( 'Tiramisu', 3.99, 'dessert, di origine italiana', 'ladyfingers (savoiardi), egg yolks, sugar, coffee, mascarpone and cocoa powder.',0),
+('CheeseCake', 4.00, 'un dolce a base di formaggio fresco a pasta molle', 'eggs, and sugar. It may have a crust or base made from crushed cookies (or digestive biscuits), graham crackers, pastry, or sometimes sponge cake.',1),
+('Chocolate Fudge', 5.00, 'a dense, rich confection', 'sugar, milk or cream, butter and chocolate or other flavorings.',0);
+
+#aggiorno il valore di menu id in base al tipo di menu scelto (1)
+ update desserts
+ SET menu_id = 1
+ where id IN (1,2,3);
+
+# creazione tabella ristorante
+create table ristorante(
+id int primary key auto_increment,
+nome varchar(255),
+citta varchar(255),
+tipo_chef enum('RICCARDO','IRESHA','ANDREA','SANTO','MICHELE'),
+coperti_disponibili int,
+);
+
+# aggiungi valori alla tabella ristorante
+insert into ristorante (nome,citta,coperti_disponibili,tipo_chef)
+values ('Lumière','Napoli',50,'MICHELE'),('Patona','Palermo',30,'RICCARDO');
+
+# create table prenotazione
+create table prenotazioni(
+id int primary key auto_increment,
+cliente_id int not null,
+ristorante_id int not null,
+numero_coperti int not null,
+foreign key (cliente_id) references clienti(id),
+foreign key (ristorante_id) references ristoranti(id)
+);
+
+
+
+
+

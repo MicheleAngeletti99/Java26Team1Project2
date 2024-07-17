@@ -1,3 +1,7 @@
+import enumarazioni.Colori;
+
+import java.util.Objects;
+
 public abstract class Portata {
     // gli field
     private String nome;
@@ -49,7 +53,7 @@ public abstract class Portata {
 
     // metodo per stampare il menu
     public void stampaDettagli(){
-        System.out.print(nome + " ");
+        System.out.print('\n' + nome + " ");
         // inseriamo i puntini
         Integer puntini = 40 - nome.length();
         for(int i = 0; i<= puntini; i++ ){
@@ -58,8 +62,19 @@ public abstract class Portata {
 
         System.out.println(prezzo + "€");
         System.out.println(descrizione);
-        System.out.println(ingredienti + '\n');
+        System.out.println(ingredienti);
     }
 
+    // Faccio Override di equals e hashCode così due portate saranno uguali se hanno gli stessi valori nei campi
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Portata portata)) return false;
+        return Objects.equals(nome, portata.nome) && Objects.equals(prezzo, portata.prezzo) && Objects.equals(descrizione, portata.descrizione) && Objects.equals(ingredienti, portata.ingredienti);
+    }
 
+    @Override
+    public int hashCode() {
+        return Objects.hash(nome, prezzo, descrizione, ingredienti);
+    }
 }

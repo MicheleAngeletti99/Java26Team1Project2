@@ -4,10 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="967428fe-9716-472c-a46e-a43fb2834770" name="Changes" comment="creata classe secondi">
+    <list default="true" id="967428fe-9716-472c-a46e-a43fb2834770" name="Changes" comment="Aggiunta tabella bevande">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Desserts.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Desserts.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/query sql.sql" beforeDir="false" afterPath="$PROJECT_DIR$/query sql.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Ristorante.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Ristorante.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,13 +19,14 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="Enum" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="main" />
+        <entry key="$PROJECT_DIR$" value="develop" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -38,18 +40,19 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.Main.executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "iresha",
+    "ignore.virus.scanning.warn.message": "true",
+    "kotlin-language-version-configured": "true",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2"
   }
-}</component>
+}]]></component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -67,15 +70,106 @@
       <option name="project" value="LOCAL" />
       <updated>1718113863993</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="creata classe secondi">
+      <option name="closed" value="true" />
+      <created>1718616237103</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1718616237103</updated>
+    </task>
+    <task id="LOCAL-00003" summary="aggiunto il classe cliente e la mappa prenotazione e id prenotazione">
+      <option name="closed" value="true" />
+      <created>1719567792747</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1719567792747</updated>
+    </task>
+    <task id="LOCAL-00004" summary="aggiunto il classe cliente e la mappa prenotazione e id prenotazione">
+      <option name="closed" value="true" />
+      <created>1719569687449</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1719569687449</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Pulizia del codice">
+      <option name="closed" value="true" />
+      <created>1720106845073</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1720106845073</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Aggiunta classe prenotazione senza collegarla a niente">
+      <option name="closed" value="true" />
+      <created>1720108958696</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1720108958696</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Modificato tutto ciò che è collegato alle prenotazioni">
+      <option name="closed" value="true" />
+      <created>1720110407153</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1720110407153</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Tolto il campo ristorante dalla classe Prenotazione e sistemati i relativi problemi">
+      <option name="closed" value="true" />
+      <created>1720713724500</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1720713724500</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Aggiunta tabella bevande">
+      <option name="closed" value="true" />
+      <created>1720860846787</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1720860846787</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
+    <option name="RECENT_FILTERS">
+      <map>
+        <entry key="Branch">
+          <value>
+            <list>
+              <RecentGroup>
+                <option name="FILTER_VALUES">
+                  <option value="HEAD" />
+                </option>
+              </RecentGroup>
+            </list>
+          </value>
+        </entry>
+      </map>
+    </option>
     <option name="TAB_STATES">
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="HEAD" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>
@@ -83,6 +177,13 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="creata classe secondi" />
-    <option name="LAST_COMMIT_MESSAGE" value="creata classe secondi" />
+    <MESSAGE value="formattazione" />
+    <MESSAGE value="aggiunto il classe cliente e la mappa prenotazione e id prenotazione" />
+    <MESSAGE value="Pulizia del codice" />
+    <MESSAGE value="Aggiunta classe prenotazione senza collegarla a niente" />
+    <MESSAGE value="Modificato tutto ciò che è collegato alle prenotazioni" />
+    <MESSAGE value="Tolto il campo ristorante dalla classe Prenotazione e sistemati i relativi problemi" />
+    <MESSAGE value="Aggiunta tabella bevande" />
+    <option name="LAST_COMMIT_MESSAGE" value="Aggiunta tabella bevande" />
   </component>
 </project>

@@ -82,11 +82,11 @@ public class Main {
         ristorantePatona.stampaMenuCompleto();
 
         // aggiungo clienti
-        Cliente alberto = new Cliente("Alberto", "Pippa");
-        Cliente ludmilla = new Cliente("Ludmilla", "Santo");
-        Cliente francesco = new Cliente("Francesco", "cavaleri");
-        Cliente paolo = new Cliente("Paolo", "Vecchione");
-        Cliente roselia = new Cliente("Rosalia", "Rocca");
+        Cliente alberto = new Cliente("Alberto", "Pippa",TipoMenu.CARNE);
+        Cliente ludmilla = new Cliente("Ludmilla", "Santo",TipoMenu.CARNE);
+        Cliente francesco = new Cliente("Francesco", "cavaleri",TipoMenu.CARNE);
+        Cliente paolo = new Cliente("Paolo", "Vecchione",TipoMenu.CARNE);
+        Cliente roselia = new Cliente("Rosalia", "Rocca",TipoMenu.CARNE);
 
         // aggiungo prenotazioni
         Prenotazione prenotazioneAlberto = new Prenotazione(alberto, 11);
@@ -122,11 +122,11 @@ public class Main {
 
 
         // aggiungo clienti
-        Cliente iresha = new Cliente("Iresha", "Warnakulasuriya");
-        Cliente michele = new Cliente("Michele", "Angeletti");
-        Cliente riccardo = new Cliente("Riccardo", "Cavaleri");
-        Cliente andrea = new Cliente("Andrea", "Vecchione");
-        Cliente santo = new Cliente("Santo", "La Rocca");
+        Cliente iresha = new Cliente("Iresha", "Warnakulasuriya",TipoMenu.CARNE);
+        Cliente michele = new Cliente("Michele", "Angeletti",TipoMenu.CARNE);
+        Cliente riccardo = new Cliente("Riccardo", "Cavaleri",TipoMenu.CARNE);
+        Cliente andrea = new Cliente("Andrea", "Vecchione",TipoMenu.CARNE);
+        Cliente santo = new Cliente("Santo", "La Rocca",TipoMenu.CARNE);
 
         // aggiungo prenotazioni
         Prenotazione prenotazioneIresha = new Prenotazione(iresha, 3);

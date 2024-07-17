@@ -170,4 +170,18 @@ public class Ristorante {
         System.out.println("COPERTIDISPONIBILI : " + copertiDisponibili);
 
     }
+
+    public void stampaMenuScelto(Cliente cliente){
+        boolean menuPresente = false;
+        for (Menu menu : listaMenu){
+            if (menu.getTipo().equals(cliente.getMenuCliente())) {
+                menu.stampaMenu();
+                menuPresente = true;
+            }
+        }
+        if (!menuPresente){
+            System.out.println("Il menu scelto dal cliente non è disponibile in questo ristorante");
+        }
+    }
+
 }

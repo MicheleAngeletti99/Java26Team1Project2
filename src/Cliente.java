@@ -1,13 +1,17 @@
+import enumarazioni.TipoMenu;
+
 public class Cliente {
 
     // gli field
     private String nome;
     private String cognome;
+    private TipoMenu menuCliente;
 
     // il costruttore
-    public Cliente(String nome,String cognome){
+    public Cliente(String nome,String cognome, TipoMenu menuCliente){
         this.nome = nome;
         this.cognome = cognome;
+        this.menuCliente = menuCliente;
     }
 
     // i getter e setter
@@ -27,6 +31,13 @@ public class Cliente {
         this.cognome = cognome;
     }
 
+    public TipoMenu getMenuCliente() {
+        return menuCliente;
+    }
+
+    public void setMenuCliente(TipoMenu menuCliente) {
+        this.menuCliente = menuCliente;
+    }
 
     // methodo per stampare gli dettagli del classe cliente
     public  void stampaDettagli(){

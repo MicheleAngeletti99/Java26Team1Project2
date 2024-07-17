@@ -94,6 +94,36 @@ add foreign key (menu_id) references menu(Id);
  update antipasti
  SET menu_id = 1
  where id IN (1,2,3,4);
+
+ #creazione tabella primi
+ create table Primi(
+ id int primary key auto_increment,
+ nome varchar (255),
+ prezzo decimal (10,2),
+ descrizione varchar (255),
+ ingredienti varchar (255),
+ cottura varchar (255),
+ regioneProvenienza varchar (255)
+ );
+
+ #creazione  colonna in riferimento alla chiave esterna
+ alter table primi
+ add column menu_id int;
+
+ #chiave esterna primi
+ alter table primi
+ add foreign key (menu_id) references menu(Id)
+
+ #inserisco valori all'interno dei primi
+ insert into Primi (nome,prezzo,descrizione,ingredienti,cottura,regioneProvenienza)
+ values ('Carbonara', 30.99, 'Guanciale come sempre', 'Uova,guanciale,pecorino a sentimento', 'Pentola', 'Firenze'),
+        ('Bolognese', 15.51, 'Ragù bono', 'Ragù alla bolognese', 'Pentola', 'Calabria'),
+        ('Genovese', 14.00, 'pasta con cipolle e carne', 'Cipolle, carne','Pentola', 'Sicilia');
+
+ # Aggiungo i primi piatti al primo menu
+ update primi
+ set menu_id = 1
+ where id in (1,2,3);
  
 #creazione tabella per relazione N a N
 create table Menu_Ristorante (

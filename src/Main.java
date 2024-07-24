@@ -1,10 +1,8 @@
-import enumarazioni.Colori;
 import enumarazioni.Cottura;
 import enumarazioni.TipoChef;
 import enumarazioni.TipoMenu;
 
-import java.util.HashMap;
-import java.util.Map;
+import java.sql.SQLException;
 
 public class Main {
     public static void main(String[] args) {
@@ -151,5 +149,12 @@ public class Main {
 
         ristoranteLumiere.stampaListaDiPrenotazioni();
 
+        // database
+        try {
+            EsempioDAO esempioDAO = new EsempioDAO();
+            esempioDAO.insertPrimiPiatti((Primi)primi1);
+        } catch (SQLException e){
+            System.out.println(e.getErrorCode());
+        }
     }
 }

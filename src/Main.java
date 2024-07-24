@@ -154,7 +154,7 @@ public class Main {
             EsempioDAO esempioDAO = new EsempioDAO();
             esempioDAO.insertPrimiPiatti((Primi)primi1);
         } catch (SQLException e){
-            System.out.println(e.getErrorCode());
+            System.out.println("Error code: " + e.getErrorCode());
         }
     }
 }

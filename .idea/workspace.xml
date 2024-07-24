@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="967428fe-9716-472c-a46e-a43fb2834770" name="Changes" comment="Sistemato il file con le query sql">
+    <list default="true" id="967428fe-9716-472c-a46e-a43fb2834770" name="Changes" comment="Aggiunto esempio di connessione a sql">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java26Team1Project2.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Java26Team1Project2.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -17,8 +16,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Enum" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -41,10 +40,10 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    "Application.Main.executor": "Debug",
+    "Application.Main.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
+    "git-widget-placeholder": "BevandeDAO",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/Mmiik/Downloads/mysql-connector-java-8.0.30.jar",
@@ -134,7 +133,15 @@
       <option name="project" value="LOCAL" />
       <updated>1720860846787</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Aggiunto esempio di connessione a sql">
+      <option name="closed" value="true" />
+      <created>1721825374460</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1721825374461</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -184,6 +191,7 @@
     <MESSAGE value="Modificato tutto ciò che è collegato alle prenotazioni" />
     <MESSAGE value="Tolto il campo ristorante dalla classe Prenotazione e sistemati i relativi problemi" />
     <MESSAGE value="Aggiunta tabella bevande" />
-    <option name="LAST_COMMIT_MESSAGE" value="Aggiunta tabella bevande" />
+    <MESSAGE value="Aggiunto esempio di connessione a sql" />
+    <option name="LAST_COMMIT_MESSAGE" value="Aggiunto esempio di connessione a sql" />
   </component>
 </project>

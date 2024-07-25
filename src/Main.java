@@ -151,8 +151,8 @@ public class Main {
 
         // database
         try {
-            EsempioDAO esempioDAO = new EsempioDAO();
-            esempioDAO.insertPrimiPiatti((Primi)primi1);
+            BevandeDAO bevandeDAO = new BevandeDAO();
+            bevandeDAO.printAllBevande();
         } catch (SQLException e){
             System.out.println("Error code: " + e.getErrorCode());
         }
